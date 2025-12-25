@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: main # NOTE: Check if your GitHub uses 'main' or 'master'
+
+media_folder: "Photography/Uploads"
+public_folder: "/Photography/Uploads"
+
+collections:
+  - name: "data"
+    label: "Site Data"
+    files:
+      - name: "albums"
+        label: "Photo Albums"
+        file: "data.json"
+        fields:
+          - label: "Albums"
+            name: "albums"
+            widget: "list"
+            fields:
+              - {label: "ID (URL Name)", name: "id", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Cover Image", name: "cover", widget: "image"}
+              - {label: "Photos", name: "images", widget: "list", field: {label: "Image", widget: "image"}}
