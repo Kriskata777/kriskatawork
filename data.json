@@ -187,7 +187,10 @@
     {
       "id": "Test",
       "cover": "/Photography/Uploads/instagram.png",
-      "title": "Test"
+      "title": "Test",
+      "images": [
+        "/Photography/Uploads/instagram.png"
+      ]
     }
   ]
 }
