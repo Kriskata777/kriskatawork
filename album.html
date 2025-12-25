@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album View</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body class="photography-page">
+    
+    <header>
+        <div class="logo-container">
+            <a href="home.html"><img src="logo.png" alt="My Logo" class="logo"></a>
+        </div>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="line"></div><div class="line"></div><div class="line"></div>
+            </div>
+            <ul class="dropdown-content">
+                <li><a href="work.html" class="menu-link">Work</a></li>
+                <li><a href="contact.html" class="menu-link">Contact</a></li>
+            </ul>
+            <ul class="menu">
+                <li><a href="work.html" class="menu-link">Work</a></li>
+                <li><a href="contact.html" class="menu-link">Contact</a></li>
+            </ul>
+        </nav>
+        <script src="menu.js"></script>
+    </header>
+
+    <header class="hero" style="text-align: center; margin-top: 20px;">
+        <h2 id="album-title">Loading...</h2>
+        <a href="photography.html" style="color: #bbb; text-decoration: none; font-size: 0.9rem;">← Назад към всички албуми</a>
+    </header>
+
+    <div class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-nav lightbox-prev"></div>
+        <div class="lightbox-content"><img class="lightbox-image"></div>
+        <div class="lightbox-nav lightbox-next"></div>
+    </div>
+
+    <div class="photo-gallery" id="gallery-container">
+        </div>
+
+    <style>
+        body { background-color: #222; margin: 0; padding: 0; }
+    </style>
+    
+    <footer>© Kriskata</footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const albumId = params.get('id');
+            const container = document.getElementById('gallery-container');
+            const titleElement = document.getElementById('album-title');
+
+            // 1. Fetch Data
+            fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    // 2. Find the correct album
+                    const album = data.albums.find(a => a.id === albumId);
+
+                    if (!album) {
+                        titleElement.innerText = "Album Not Found";
+                        return;
+                    }
+
+                    // 3. Update Page Info
+                    titleElement.innerText = album.title;
+                    document.title = album.title + " | Kriskata";
+
+                    // 4. Generate Images
+                    album.images.forEach(imgSrc => {
+                        const div = document.createElement('div');
+                        div.className = 'photo-item';
+                        // Add specific class based on path (optional detection)
+                        if (imgSrc.includes('/Vertical/')) {
+                            div.classList.add('vertical');
+                        } else {
+                            div.classList.add('horizontal');
+                        }
+                        
+                        const img = document.createElement('img');
+                        img.src = imgSrc;
+                        img.className = 'photo-thumb';
+                        img.loading = 'lazy';
+                        
+                        div.appendChild(img);
+                        container.appendChild(div);
+                    });
+                })
+                .catch(err => console.error("Error loading album data:", err));
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

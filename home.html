@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kriskata</title>
+        <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+        <link rel="icon" href="logo.png" type="image/png">
+    </head>
+    
+<body>
+    
+    <header>
+        <div class="logo-container">
+            <a href="home.html">
+                <img src="logo.png" alt="My Logo" class="logo"> <!-- Add your logo image here -->
+            </a>
+        </div>
+        <nav>
+            <nav>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a href="work.html" class="menu-link">Work</a></li>
+                    <li><a href="contact.html" class="menu-link">Contact</a></li>
+                </ul>
+                <ul class="menu">
+                    <li><a href="work.html" class="menu-link">Work</a></li>
+                    <li><a href="contact.html" class="menu-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <script src="menu.js"></script>
+        </nav>
+        
+        <script src="menu.js"></script>
+    </nav>
+    </header>
+
+    <body>
+        <!-- Header -->
+        <header class="hero">
+            <h2>Най-разглеждани</h2>
+
+        </header>
+    
+        <!-- Work Categories -->
+        <section class="work-categories1">
+            <section class="categories1">
+                <ul class="category-list1">
+                    <li>
+                        <a href="portfolio.html?category=edited">
+                            <img src="edited.png" alt="Edited Videos" class="category-image1">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shooted.html?category=shooted">
+                            <img src="shooted.png" alt="Shooted Videos" class="category-image1">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="thumbnails.html?category=thumbnails">
+                            <img src="thumbnails.png" alt="Thumbnails" class="category-image1">
+                        </a>
+                    </li>
+             
+                </ul>
+            </section>
+            
+        </section>
+
+        <style>
+            body {
+                background-color: #222; /* dark gray */
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+
+<section class="testimonials">
+    <h2>Мнения от клиенти</h2>
+    <div class="testimonial-slider">
+        <div class="testimonial">
+            <a href="https://www.instagram.com/justteya_/" target="_blank">
+            <img src="/Reviews/channels4_profile.jpg" alt="Teya" class="profile-picture">
+            </a>
+            <p>"Много съм доволна от помощта с тъмбнейлите за YouTube! Бяха направени точно както исках, бързо и с внимание към детайла. Резултатът наистина подобри визията на видеата ми. Благодаря много за съдействието!"</p>
+            <span>- Тея</span>
+        </div>
+        <div class="testimonial">
+            <a href="https://www.instagram.com/carstvoto_na_nargiletata/" target="_blank">
+            <img src="/Reviews/channels4_profile (1).jpg" alt="Zahi" class="profile-picture">
+            </a>
+
+            <p>"Много съм доволен от целият процес. Обработва, прави подходящи тъмбнейли, мотивира ме за още видеа, което за мен е най-важното качество. Отнася се с внимание към детайлите. Препоръчвам го на всеки! Благодарен съм, че работим заедно!"</p>
+            <span>- Захи, Царството на наргилетата</span>
+        </div>
+                <div class="testimonial">
+            <a href="https://www.instagram.com/vladislavchanev/" target="_blank">
+            <img src="/Reviews/unnamed (1).jpg" alt="Vladi" class="profile-picture">
+            </a>
+            <p>"Работата с него е удоволствие. Не просто изпълнява, а мисли, предлага идеи и подобрява проекта. Няма нужда да му се напомня, той следи сроковете и дърпа процеса напред. Винаги реагира навреме, комуникацията е ясна и директна. Истински партньор!"</p>
+            <span>- Vladislav Chanev</span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const testimonials = document.querySelectorAll(".testimonial");
+            let currentIndex = 0;
+    
+            function showNextTestimonial() {
+                testimonials[currentIndex].classList.remove("active");
+                currentIndex = (currentIndex + 1) % testimonials.length;
+                testimonials[currentIndex].classList.add("active");
+            }
+    
+            // Initially show the first testimonial
+            testimonials[currentIndex].classList.add("active");
+    
+            // Auto-scroll every 10 seconds
+            setInterval(showNextTestimonial, 10000);
+        });
+    </script>
+    
+</section>
+
+
+
+<footer>
+    © Kriskata
+</footer>
+
+</body>
+</html>

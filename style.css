@@ -1,0 +1,1438 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom, 222, 222); /* Gradient from dark blue to faded dark blue */
+        color: white;
+        min-height: 100vh; /* Ensures the body is at least as tall as the viewport */
+        margin: 0; /* Remove default margin */
+        background-attachment: fixed; /* Keeps the background fixed while scrolling */
+        overflow-x: hidden; /* Prevents horizontal scroll */
+    }
+
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        position: relative; /* Allow positioning of nav */
+    }
+
+    .logo-container {
+        margin-bottom: 20px;
+    }
+
+    .logo {
+        width: 111px; /* Adjust size as needed */
+        height: auto;
+    }
+
+    nav {
+        position: absolute; /* Position the nav in the header */
+        right: 10px; /* Adjust this value to position it as desired */
+        top: 20px; /* Adjust this value to position it as desired */
+    }
+
+    nav .menu {
+        list-style-type: none;
+    }
+
+    nav .menu li {
+        position: relative; /* Allow dropdown positioning */
+    }
+
+    .hamburger {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .line {
+        width: 25px; /* Width of the lines */
+        height: 3px; /* Height of the lines */
+        background-color: white; /* Color of the lines */
+        margin: 3px 0; /* Space between the lines */
+    }
+
+    nav .dropdown-content {
+        display: none; /* Hide the dropdown content by default */
+        position: absolute; /* Position it relative to the dropdown */
+        right: 0; /* Align it to the right of the hamburger */
+        background-color: #2f3136; /* Background color of dropdown */
+        min-width: 120px; /* Minimum width of dropdown */
+        z-index: 1000; /* Ensure dropdown appears above other content */
+    }
+
+    .hamburger:hover + .dropdown-content,
+    .dropdown-content:hover {
+        display: block; /* Show dropdown on hover */
+    }
+
+    nav .dropdown-content a {
+        color: white; /* Color for dropdown links */
+        padding: 10px; /* Padding for dropdown links */
+        text-decoration: none; /* Remove underline from dropdown links */
+        display: block; /* Make links block-level for easier clicking */
+    }
+
+    .projects {
+        text-align: center;
+        position: relative;
+        padding: 50px 20px;
+        z-index: 1;
+        margin-bottom: 50px; /* Add space below the section */
+    }
+
+
+    .projects h1 {
+        margin-bottom: 30px; /* Adjust the value as needed for desired space */
+    }
+
+    .projects  {
+        margin-bottom: 40px; /* Increase space below the heading */
+    }
+
+    .project-list {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap to the next row */
+        justify-content: center; /* Center the items */
+        gap: 70px; /* Space between columns and rows */
+    }
+
+    .project {
+        margin: 50px 0;
+        text-align: center;
+    }
+
+    .video-container {
+        position: relative;
+        width: 100%; /* Full width of the container */
+        max-width: 1920px; /* Limit maximum width to 1920px */
+        aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+        overflow: hidden; /* Prevent overflow */
+        margin: 0 auto 20px; /* Center and add spacing below */
+    }
+    
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Make iframe responsive */
+        height: 100%; /* Adjust height proportionally */
+        border: 0; /* Remove border */
+        display: block; /* Prevent inline spacing issues */
+    }
+    
+    /* Additional styles for spacing between videos */
+    .project-list-videos {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap */
+        justify-content: center; /* Center videos */
+        gap: 20px; /* Space between videos */
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 1024px) {
+        .project-list-videos {
+            gap: 15px; /* Reduce spacing for tablets */
+        }
+    }
+    
+    @media (max-width: 600px) {
+        .project-list-videos {
+            flex-direction: column; /* Stack videos vertically */
+            gap: 10px; /* Reduce spacing for smaller screens */
+        }
+    }
+    
+
+    .categories {
+        text-align: center; /* Center-align the text */
+        margin: 50px 0; /* Space around the section */
+    }
+
+    /* Work Page Categories Container */
+/* Work Page Categories Container */
+/* Category Container */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Container Styles */
+
+
+
+
+
+
+    body {
+        margin: 0; /* Remove default margin */
+        overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+
+    #starCanvas {
+        position: fixed; /* Keep it fixed in the background */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* Cover the entire viewport */
+        z-index: -1; /* Place it behind other content */
+    }
+
+    .categories {
+        text-align: center; /* Center-align the text */
+        margin: 50px 0; /* Space around the section */
+        position: relative; /* Make the position relative for z-index to work */
+        z-index: 1; /* Bring categories to the front */
+    }
+
+    .category-list {
+        list-style-type: none; /* Remove bullet points */
+        padding: 0; /* Remove padding */
+    }
+
+    .category-list li {
+        margin: 50px 0; /* Increased space between categories */
+    }
+
+    .category-list h2 {
+        margin-bottom: 20px; /* Space between category title and image */
+        color: white; /* Ensure title is white */
+    }
+
+    .category-image {
+        width: 500px; /* Set image width */
+        height: auto; /* Maintain aspect ratio */
+        cursor: pointer; /* Indicate clickable image */
+        transition: transform 0.3s; /* Smooth zoom effect on hover */
+    }
+
+    .category-image:hover {
+        transform: scale(1.05); /* Scale image on hover */
+    }
+
+    .portfolio {
+        text-align: center; /* Center the text */
+        margin: 40px 0; /* Add vertical margin to the section */
+    }
+
+    .portfolio h1 {
+        margin-bottom: 20px; /* Space below the title */
+    }
+
+
+    .contact {
+        text-align: center; /* Center the text */
+        margin: 40px; /* Add margin to the section */
+        color: white; /* Text color */
+    }
+
+    .contact h1 {
+        margin-bottom: 20px; /* Space below the title */
+    }
+
+    .form-group {
+        margin: 20px 0; /* Space between form fields */
+        display: flex; /* Use flexbox for alignment */
+        flex-direction: column; /* Stack children vertically */
+        align-items: center; /* Center children */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 300px; /* Set a width for inputs */
+        padding: 10px; /* Add some padding */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Rounded corners */
+        margin: 0; /* Remove any default margin */
+    }
+
+    textarea {
+        width: 300px; /* Set width for textarea */
+        resize: none; /* Disable resizing */
+    }
+
+    button {
+        padding: 10px 20px; /* Padding for the button */
+        background-color: #1a4e7a; /* Button background color */
+        color: white; /* Button text color */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+    }
+
+    button:hover {
+        background-color: #165a8a; /* Darker background on hover */
+    }
+
+    footer {
+        position: fixed; /* Keep the footer at the bottom of the viewport */
+        bottom: 0; /* Align the footer to the bottom */
+        right: 0; /* Align the footer to the right */
+        background-color: none; /* Semi-transparent black background */
+        padding: 10px; /* Padding around the footer */
+        border-top-left-radius: 10px; /* Optional: Rounded top left corner */
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: flex-end; /* Align items to the right */
+        align-items: center; /* Align items vertically in the center */
+    }
+
+    .instagram-logo {
+        width: 30px; /* Set the width of the Instagram logo */
+        height: auto; /* Maintain aspect ratio */
+        transition: transform 0.3s; /* Smooth scale transition on hover */
+    }
+
+    .instagram-logo:hover {
+        transform: scale(1.1); /* Scale logo on hover */
+    }
+
+    .project-list-videos {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap to the next row */
+        justify-content: center; /* Center the items */
+        gap: 70px; /* Space between columns and rows */
+    }
+
+    .project-list-thumbnails {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap to the next row */
+        justify-content: center; /* Center the items */
+        gap: 30px; /* Space between columns and rows */
+    }
+
+    .thumbnail-container {
+        width: 100%; /* Make container full width */
+        max-width: 1000px; /* Set a maximum width for larger screens */
+        margin: 0 auto 40px; /* Center the container and add spacing below each image */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .thumbnail-image {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .experiments {
+        text-align: center;
+        padding: 50px 20px;
+        margin-bottom: 50px;
+    }
+    
+    .experiments h1 {
+        margin-bottom: 20px;
+    }
+
+    .experiments h3 {
+        margin-bottom: 20px;
+    }
+    
+    .experiment-list {
+        display: block; /* Change to block to make one image per line */
+    }
+    
+    .experiment-container {
+        width: 100%; /* Make container full width */
+        max-width: 1000px; /* Set a maximum width for larger screens */
+        margin: 0 auto 40px; /* Center the container and add spacing below each image */
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .experiment-thumbnail {
+        width: 100%;
+        height: auto;
+    }
+    
+    .experiment-thumbnail img {
+        width: 100%; /* Make sure the image takes up full width of container */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensure the whole image is visible */
+    }
+
+    .after-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Maintain aspect ratio */
+        transition: opacity 0.5s ease;
+    }
+    .after-image {
+        opacity: 0; /* Hide after image by default */
+    }
+
+    .thumbnail:hover .after-image,
+    .experiment-thumbnail:hover .after-image {
+        opacity: 1; /* Show after image on hover */
+    }
+
+    .thumbnail:hover .before-image,
+    .experiment-thumbnail:hover .before-image {
+        opacity: 0; /* Hide before image on hover */
+    }
+
+
+
+
+.project-list-thumbnails11 {
+    display: flex; /* Use flexbox for alignment */
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    justify-content: center; /* Center the items */
+    gap: 30px; /* Space between items */
+    padding: 20px; /* Add padding around the container */
+}
+
+.thumbnail-container11 {
+    flex: 1 1 calc(33.33% - 20px); /* Up to 3 images per row */
+    max-width: calc(33.33% - 20px); /* Limit container width */
+    position: relative; /* For hover effects */
+    overflow: hidden; /* Prevent images from overflowing */
+}
+
+.thumbnail-image11 {
+    width: 100%; /* Scale the image to the container's width */
+    height: auto; /* Maintain the image's aspect ratio */
+    max-height: 3240px; /* Limit the image height for very tall images */
+    object-fit: contain; /* Ensure the whole image is visible */
+    display: block; /* Avoid inline spacing issues */
+    border-radius: 8px; /* Optional: Rounded corners */
+    transition: transform 0.3s ease; /* Smooth hover zoom effect */
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .thumbnail-container11 {
+        flex: 1 1 calc(50% - 20px); /* Two images per row on tablets */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .thumbnail-container11 {
+        flex: 1 1 100%; /* One image per row on smaller screens */
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+/* Center the gallery and apply consistent layout */
+.photo-gallery-container {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns based on screen size */
+    grid-gap: 20px; /* Space between images */
+    padding: 20px;
+    max-width: 90%; /* Set a max-width for the gallery */
+    margin: 0 auto;
+}
+
+/* Ensure consistent sizing for both vertical and horizontal images */
+.photo-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photo:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Handling the size of horizontal images */
+.photo.large-horizontal {
+    grid-column: span 2;
+    grid-row: span 1;
+    height: 200px; /* Set height for horizontal images */
+}
+
+.photo.medium-horizontal {
+    grid-column: span 2;
+    grid-row: span 1;
+    height: 150px; /* Adjust height for medium horizontal images */
+}
+
+/* Handling the size of vertical images */
+.photo.large-vertical {
+    grid-column: span 1;
+    grid-row: span 2;
+    height: 400px; /* Set height for vertical images */
+}
+
+.photo.medium-vertical {
+    grid-column: span 1;
+    grid-row: span 2;
+    height: 300px; /* Adjust height for medium vertical images */
+}
+
+/* Small images, fitting into one grid column */
+.photo.small {
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 150px;
+}
+
+/* Modal (same as before) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* Responsive design to handle different screen sizes */
+
+/* For medium-sized screens */
+@media (max-width: 1024px) {
+    .photo-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* More flexible for medium screens */
+    }
+
+    .photo.large-horizontal,
+    .photo.large-vertical,
+    .photo.medium-horizontal,
+    .photo.medium-vertical {
+        grid-column: span 1;
+        grid-row: span 1; /* Fit images within the smaller screen */
+    }
+}
+
+/* For small screens like tablets and phones */
+@media (max-width: 768px) {
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+
+    .photo.large-horizontal,
+    .photo.large-vertical,
+    .photo.medium-horizontal,
+    .photo.medium-vertical {
+        grid-column: span 1; /* Adjust to fit small screen */
+        grid-row: span 1;
+    }
+}
+
+/* For extra-small screens like phones */
+@media (max-width: 480px) {
+    .photo-gallery {
+        grid-template-columns: repeat(1, 1fr); /* Stack images on very small screens */
+    }
+
+    .photo.large-horizontal,
+    .photo.large-vertical,
+    .photo.medium-horizontal,
+    .photo.medium-vertical {
+        grid-column: span 1; /* Adjust all to fit the smallest screen */
+        grid-row: span 1;
+    }
+}
+
+/* Navigation arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    user-select: none;
+    z-index: 1001; /* Make sure it is on top of the modal image */
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.testimonials {
+    padding: 5vw 2vw; /* Adjust padding based on viewport width */
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.testimonials h2 {
+    margin-bottom: 2vw;
+    font-size: 2rem; /* Base size */
+    color: #333;
+    line-height: 1.2;
+}
+
+.testimonial-slider {
+    position: relative;
+    width: 90%; /* Relative to screen size */
+    max-width: 600px; /* Limit width for larger screens */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.testimonial {
+    display: none; /* Hide all testimonials initially */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2vw; /* Add padding for better spacing */
+}
+
+.testimonial.active {
+    display: flex; /* Show the active testimonial */
+}
+
+.profile-picture {
+    width: 15vw; /* Relative width for responsiveness */
+    max-width: 120px; /* Limit size for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the image circular */
+    margin-bottom: 2vw;
+    border: 2px solid #ddd;
+    object-fit: cover;
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #555;
+    margin: 1vw 2vw;
+    font-size: 1rem; /* Adjust font size */
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 1vw;
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9rem; /* Adjust font size */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .profile-picture {
+        width: 20vw; /* Slightly smaller for tablets */
+        max-width: 100px;
+    }
+
+    .testimonials h2 {
+        font-size: 1.8rem; /* Reduce font size for smaller screens */
+    }
+
+    .testimonial p {
+        font-size: 0.9rem; /* Adjust text size */
+    }
+
+    .testimonial span {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-picture {
+        width: 25vw; /* Smaller size for phones */
+        max-width: 80px;
+    }
+
+    .testimonials h2 {
+        font-size: 1.5rem;
+    }
+
+    .testimonial p {
+        font-size: 0.8rem;
+    }
+
+    .testimonial span {
+        font-size: 0.7rem;
+    }
+}
+
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Container Styles */
+.category-list1 {
+    display: grid; /* Use CSS Grid */
+    gap: 20px; /* Add space between items */
+    padding: 20px; /* Optional: Add padding around the list */
+    grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
+    width: 100%; /* Ensure the grid container doesn't overflow */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    grid-auto-rows: minmax(150px, auto); /* Ensure rows are responsive */
+    overflow: hidden;
+    margin: 0 auto; /* Center the grid itself */
+    max-width: 1200px; /* Limit the maximum width */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Horizontally center the grid */
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+
+/* Image Styles */
+.category-image1 {
+    width: 100%; /* Ensure images fill the container */
+    height: auto;
+    max-width: 500px; /* Limit maximum width of images */
+    border-radius: 8px; /* Optional: Rounded corners */
+    transition: transform 0.3s ease; /* Optional: Hover effect */
+}
+
+.category-image1:hover {
+    transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+/* Responsive Layouts */
+@media (max-width: 1200px) {
+    .category-list1 {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .category-list1 {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-list1 {
+        grid-template-columns: 1fr; /* 1 column for phones */
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}
+
+/* For 2k Wide Screens (e.g. 2560px wide) */
+@media (min-width: 2000px) {
+    .category-list1 {
+        grid-template-columns: repeat(5, 1fr); /* 5 columns for larger screens */
+        max-width: 80%; /* You can adjust the width to better fit your design */
+    }
+}
+
+
+/* Ensure the section has enough space below */
+.testimonials {
+    padding: 5vw 2vw; /* Adjust padding based on viewport width */
+    text-align: center;
+    background-color: #141414; /* Dark background */
+    color: white; /* White text */
+    margin-bottom: 40px; /* Ensure a good space below the section */
+    max-width: 1200px; /* Limit max width for larger screens */
+    margin: 0 auto; /* Center the section */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Title Styles */
+.testimonials h2 {
+    margin-bottom: 2vw;
+    font-size: 2rem; /* Base size */
+    color: white; /* White text */
+    line-height: 1.2;
+}
+
+/* Testimonial Slider Container */
+.testimonial-slider {
+    position: relative;
+    width: 90%; /* Relative to screen size */
+    max-width: 600px; /* Limit width for larger screens */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Individual Testimonials */
+.testimonial {
+    display: none; /* Hide all testimonials initially */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2vw; /* Add padding for better spacing */
+}
+
+/* Active Testimonial */
+.testimonial.active {
+    display: flex; /* Show the active testimonial */
+}
+
+/* Profile Picture Styles */
+.profile-picture {
+    width: 15vw; /* Relative width for responsiveness */
+    max-width: 120px; /* Limit size for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the image circular */
+    margin-bottom: 2vw;
+    border: 2px solid #ddd;
+    object-fit: cover;
+}
+
+/* Testimonial Text Styles */
+.testimonial p {
+    font-style: italic;
+    color: #ddd; /* Slightly lighter white for text */
+    margin: 1vw 2vw;
+    font-size: 1rem; /* Adjust font size */
+}
+
+/* Testimonial Name and Role */
+.testimonial span {
+    display: block;
+    margin-top: 1vw;
+    font-weight: bold;
+    color: white; /* White text */
+    font-size: 0.9rem; /* Adjust font size */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .profile-picture {
+        width: 20vw; /* Slightly smaller for tablets */
+        max-width: 100px;
+    }
+
+    .testimonials h2 {
+        font-size: 1.8rem; /* Reduce font size for smaller screens */
+    }
+
+    .testimonial p {
+        font-size: 0.9rem; /* Adjust text size */
+    }
+
+    .testimonial span {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-picture {
+        width: 25vw; /* Smaller size for phones */
+        max-width: 80px;
+    }
+
+    .testimonials h2 {
+        font-size: 1.5rem;
+    }
+
+    .testimonial p {
+        font-size: 0.8rem;
+    }
+
+    .testimonial span {
+        font-size: 0.7rem;
+    }
+}
+
+
+
+
+.category-list {
+    display: grid; /* Use CSS Grid */
+    gap: 20px; /* Add space between items */
+    padding: 20px; /* Optional: Add padding around the list */
+    grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
+    width: 100%; /* Ensure the grid container doesn't overflow */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    grid-auto-rows: minmax(150px, auto); /* Ensure rows are responsive */
+    overflow: hidden;
+    margin: 0 auto; /* Center the grid itself */
+    max-width: 1200px; /* Limit the maximum width */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Horizontally center the grid */
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+
+/* Image Styles */
+.category-image {
+    width: 100%; /* Ensure images fill the container */
+    height: auto;
+    max-width: 500px; /* Limit maximum width of images */
+    border-radius: 8px; /* Optional: Rounded corners */
+    transition: transform 0.3s ease; /* Optional: Hover effect */
+}
+
+.category-image:hover {
+    transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+/* Responsive Layouts */
+@media (max-width: 1200px) {
+    .category-list {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .category-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-list {
+        grid-template-columns: 1fr; /* 1 column for phones */
+        padding-left: 70px;  /* Match home page padding */
+        padding-right: 70px; /* Match home page padding */
+    }
+}
+
+/* For 2k Wide Screens (e.g. 2560px wide) */
+@media (min-width: 2000px) {
+    .category-list {
+        grid-template-columns: repeat(5, 1fr); /* 5 columns for larger screens */
+        max-width: 80%; /* You can adjust the width to better fit your design */
+    }
+}
+
+/* Footer Styles */
+footer {
+    text-align: center; /* Center the text */
+    padding: 20px; /* Add padding around the footer */
+    color: white; /* White text */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    position: relative; /* Ensure it stays at the bottom */
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* General Video Container Styles */
+.video-container {
+    position: relative;
+    width: 100%; /* Full width of the container */
+    max-width: 100%; /* Allow it to scale within its parent */
+    aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+    overflow: hidden; /* Prevent overflow */
+    margin: 0 auto 20px; /* Center and add spacing below */
+}
+
+/* Iframe Styles for Videos */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Make iframe responsive */
+    height: 100%; /* Adjust height proportionally */
+    border: 0; /* Remove border */
+    display: block; /* Prevent inline spacing issues */
+}
+
+/* Project List Styles using CSS Grid */
+.project-list-videos {
+    display: grid; /* Use CSS Grid for better control */
+    gap: 20px; /* Space between videos */
+    justify-content: center; /* Center videos in the grid */
+    grid-template-columns: repeat(3, 1fr); /* Default to 3 columns on large screens */
+    margin: 0 auto;
+    max-width: 100%; /* Allow it to take up full width */
+}
+
+/* Responsive Adjustments */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+    .project-list-videos {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+        gap: 15px; /* Reduce gap for tablets */
+    }
+}
+
+/* Smaller Screens (Phones) */
+@media (max-width: 600px) {
+    .project-list-videos {
+        grid-template-columns: 1fr; /* 1 column for smaller screens */
+        gap: 10px; /* Reduce gap for small screens */
+    }
+}
+
+/* Large Screens (Desktops) */
+@media (min-width: 1600px) {
+    .project-list-videos {
+        grid-template-columns: repeat(3, 1fr); /* Ensure 3 videos per row on large screens */
+        max-width: 100%; /* Ensure container doesn't overflow */
+    }
+}
+
+
+
+
+
+/* Menu Container */
+.menu {
+    list-style: none; /* Remove bullets */
+    display: flex; /* Align items in a row */
+    gap: 20px; /* Space between links */
+    position: absolute; /* Position relative to the page */
+    top: 10px; /* Adjust this value to move the menu higher */
+    right: 20px; /* Align to the right */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    transform: translateY(-50%); /* Fine-tune alignment */
+}
+
+/* Menu Links */
+.menu-link {
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    color: white; /* Set link color */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.menu-link:hover {
+    color: #00bfff; /* Change color on hover */
+}
+
+/* Responsive Menu for Small Screens */
+@media (max-width: 768px) {
+/* Dropdown Menu Content */
+
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 60px; /* Increase this value to move the menu lower */
+    right: 20px; /* Align to the right */
+    background-color: #2b3b63; /* Background color */
+    min-width: 120px; /* Minimum width */
+    padding: 10px 0; /* Padding for the dropdown items */
+    border-radius: 4px; /* Optional: Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: Shadow */
+    z-index: 1000; /* Place above other elements */
+}
+
+
+/* Links in Dropdown */
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block; /* Block for better clickability */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 20px;
+    right: 20px;
+    gap: 5px;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Show Dropdown When Active */
+.hamburger.active + .dropdown-content {
+    display: block;
+}
+
+    
+
+    .menu.menu-active {
+        display: flex; /* Show the menu when active */
+    }
+
+    .menu-link {
+        font-size: 16px; /* Slightly smaller text for small screens */
+        padding: 10px 0; /* Add spacing between links */
+    }
+
+    .hamburger {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 20px; /* Adjust based on desired placement */
+        right: 20px; /* Align with the edge */
+        gap: 5px; /* Space between the lines */
+    }
+
+    .line {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        transition: transform 0.3s ease;
+    }
+}
+
+/* Default Styles (Large Screens) */
+.menu {
+    display: flex; /* Show the linked text menu on large screens */
+}
+
+.hamburger {
+    display: none; /* Hide the hamburger menu by default */
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Hide the linked text menu on small screens */
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger menu on small screens */
+    }
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main container to center everything */
+.page-container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/* Gallery Grid - Centered with zero gap */
+/* --- UPDATED GALLERY STYLE --- */
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1600px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.photo-item {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.photo-thumb {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Hover effect */
+.photo-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Mobile — one image per row */
+@media (max-width: 600px) {
+    .photo-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* --- RESPONSIVE --- */
+
+/* On Tablets (iPad, etc.) keep 2 columns but smaller gaps */
+@media (max-width: 1024px) {
+    .photo-gallery {
+        column-count: 2;
+        column-gap: 20px;
+    }
+}
+
+
+/* On Phones: 1 Column (Full Width Images) */
+@media (max-width: 600px) {
+    .photo-gallery {
+        column-count: 1;
+    }
+    .photo-item {
+        margin-bottom: 20px;
+    }
+}
+
+.photo-thumb:hover {
+    transform: scale(1.03);
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.96);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-image {
+    max-height: 90vh;
+    max-width: 90vw;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .photo-gallery {
+        grid-template-columns: repeat(4, 220px); /* 4 columns for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .photo-gallery {
+        grid-template-columns: repeat(2, 220px); /* 3 columns for tablet-sized screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .photo-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Auto columns for small tablets & phones */
+        width: 98%;
+    }
+
+    .photo-item {
+        height: 200px; /* Adjust photo item height for smaller screens */
+    }
+
+    .photo-item.horizontal {
+        grid-column: span 1; /* Ensure horizontal images take up one column on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Small screens like phones */
+    }
+
+    .photo-item {
+        height: 160px; /* Adjust photo item height for very small screens */
+    }
+
+    .photo-thumb {
+        transition: transform 0.2s ease; /* Slightly faster hover transition for mobile */
+    }
+}
+
+/* --- CONTACT PAGE STYLES --- */
+
+.contact-section {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05); /* Subtle glass effect */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+}
+
+.contact-section h1 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.contact-section p {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left; /* Aligns labels to the left */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: white;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00bfff; /* Highlight color when typing */
+    box-shadow: 0 0 8px rgba(0, 191, 255, 0.3);
+}
+
+.submit-btn {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #ddd;
+    transform: translateY(-2px);
+}
+
+
+/* --- YOUTUBE LITE EMBEDS (For Faster Loading) --- */
+
+.video-container {
+    background-color: #000;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    /* This ensures standard 16:9 video shape */
+    aspect-ratio: 16 / 9; 
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.video-container:hover .video-placeholder {
+    opacity: 1;
+}
+
+/* FAKE PLAY BUTTON */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 68px;
+    height: 48px;
+    background-color: rgba(33, 33, 33, 0.8); /* YouTube Grey */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    z-index: 2; /* Sits on top of image */
+}
+
+/* Triangle Icon */
+.play-button::after {
+    content: '';
+    display: block;
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 16px solid white;
+    margin-left: 5px;
+}
+
+/* Hover Effect: Turn button red */
+.video-container:hover .play-button {
+    background-color: #f00;
+}

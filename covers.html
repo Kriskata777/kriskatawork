@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covers</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your external CSS file -->
+    <link rel="icon" href="logo.png" sizes="32x32" type="image/png"> <!-- Favicon -->
+</head>
+<body>
+    
+    <header>
+        <div class="logo-container">
+            <a href="home.html">
+                <img src="logo.png" alt="My Logo" class="logo"> <!-- Add your logo image here -->
+            </a>
+        </div>
+        <nav>
+            <nav>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a href="work.html" class="menu-link">Work</a></li>
+                    <li><a href="contact.html" class="menu-link">Contact</a></li>
+                </ul>
+                <ul class="menu">
+                    <li><a href="work.html" class="menu-link">Work</a></li>
+                    <li><a href="contact.html" class="menu-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <script src="menu.js"></script>
+        </nav>
+    </header>
+
+    <section class="projects">
+        <h1>Covers</h1>
+        <div class="project-list-thumbnails11">
+            <div class="thumbnail-container">
+                <img src="/Covers/Жоро и Гената - cover.png" alt="Cover 2" class="thumbnail-image11"> <!-- Replace with your image -->
+            </div>
+            <div class="thumbnail-container">
+                <img src="/Covers/Banner - FINAL.jpg" alt="Cover 1" class="thumbnail-image11"> <!-- Replace with your image -->
+            </div>
+            <div class="thumbnail-container">
+                <img src="/Covers/Cover - Mitko Marianoff x Lucho - Отвъдното на любовта.png" alt="Cover 2" class="thumbnail-image11"> <!-- Replace with your image -->
+            </div>
+            <!-- Add more cover images as needed -->
+        </div>
+    </section>
+
+    <script>
+        function toggleDropdown() {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+<style>
+    body {
+        background-color: #222; /* dark gray */
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
+<footer>
+    © Kriskata
+</footer>
+
+</body>
+</html>
