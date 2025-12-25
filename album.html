@@ -6,6 +6,78 @@
     <title>Album View</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo.png" type="image/png">
+    <style>
+        body { background-color: #222; margin: 0; padding: 0; }
+        
+        /* --- LIGHTBOX STYLES (Added this to make it work!) --- */
+        .lightbox {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 9999;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.95); /* Dark background */
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lightbox.active {
+            display: flex; /* Show when active */
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 90vh;
+            border: 2px solid #333;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px; right: 30px;
+            color: #fff;
+            font-size: 50px;
+            cursor: pointer;
+            z-index: 10001;
+            transition: color 0.3s;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            padding: 20px;
+            user-select: none;
+            background: rgba(0,0,0,0.3);
+            border-radius: 5px;
+            z-index: 10000;
+            transition: background 0.3s;
+        }
+
+        .lightbox-prev { left: 20px; }
+        .lightbox-next { right: 20px; }
+        
+        /* Add arrows using CSS */
+        .lightbox-prev::after { content: '❮'; }
+        .lightbox-next::after { content: '❯'; }
+
+        .lightbox-nav:hover, .lightbox-close:hover {
+            color: #ff4444; /* Red accent on hover */
+            background: rgba(255,255,255,0.1);
+        }
+    </style>
 </head>
 <body class="photography-page">
     
@@ -34,7 +106,7 @@
         <a href="photography.html" style="color: #bbb; text-decoration: none; font-size: 0.9rem;">← Назад към всички албуми</a>
     </header>
 
-    <div class="lightbox">
+    <div class="lightbox" id="lightbox">
         <span class="lightbox-close">&times;</span>
         <div class="lightbox-nav lightbox-prev"></div>
         <div class="lightbox-content"><img class="lightbox-image"></div>
@@ -43,10 +115,6 @@
 
     <div class="photo-gallery" id="gallery-container">
         </div>
-
-    <style>
-        body { background-color: #222; margin: 0; padding: 0; }
-    </style>
     
     <footer>© Kriskata</footer>
 
@@ -56,6 +124,16 @@
             const albumId = params.get('id');
             const container = document.getElementById('gallery-container');
             const titleElement = document.getElementById('album-title');
+            
+            // Lightbox Elements
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.querySelector('.lightbox-image');
+            const closeBtn = document.querySelector('.lightbox-close');
+            const prevBtn = document.querySelector('.lightbox-prev');
+            const nextBtn = document.querySelector('.lightbox-next');
+            
+            let currentAlbumImages = [];
+            let currentIndex = 0;
 
             // 1. Fetch Data
             fetch('data.json')
@@ -72,12 +150,14 @@
                     // 3. Update Page Info
                     titleElement.innerText = album.title;
                     document.title = album.title + " | Kriskata";
+                    currentAlbumImages = album.images; // Store for lightbox
 
                     // 4. Generate Images
-                    album.images.forEach(imgSrc => {
+                    album.images.forEach((imgSrc, index) => {
                         const div = document.createElement('div');
                         div.className = 'photo-item';
-                        // Add specific class based on path (optional detection)
+                        
+                        // Check orientation based on folder name
                         if (imgSrc.includes('/Vertical/')) {
                             div.classList.add('vertical');
                         } else {
@@ -88,12 +168,68 @@
                         img.src = imgSrc;
                         img.className = 'photo-thumb';
                         img.loading = 'lazy';
+                        img.style.cursor = 'pointer'; // Show hand cursor
+                        
+                        // CLICK EVENT: Open Lightbox
+                        img.onclick = () => openLightbox(index);
                         
                         div.appendChild(img);
                         container.appendChild(div);
                     });
                 })
                 .catch(err => console.error("Error loading album data:", err));
+
+            // --- LIGHTBOX FUNCTIONS ---
+
+            function openLightbox(index) {
+                currentIndex = index;
+                updateLightboxImage();
+                lightbox.classList.add('active'); // Show the lightbox
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('active'); // Hide the lightbox
+            }
+
+            function updateLightboxImage() {
+                lightboxImg.src = currentAlbumImages[currentIndex];
+            }
+
+            function nextImage(e) {
+                if(e) e.stopPropagation();
+                currentIndex = (currentIndex + 1) % currentAlbumImages.length;
+                updateLightboxImage();
+            }
+
+            function prevImage(e) {
+                if(e) e.stopPropagation();
+                if (currentIndex === 0) {
+                    currentIndex = currentAlbumImages.length - 1;
+                } else {
+                    currentIndex--;
+                }
+                updateLightboxImage();
+            }
+
+            // Event Listeners for Buttons
+            closeBtn.addEventListener('click', closeLightbox);
+            nextBtn.addEventListener('click', nextImage);
+            prevBtn.addEventListener('click', prevImage);
+            
+            // Close when clicking the black background
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            // Keyboard support (Arrow keys and Escape)
+            document.addEventListener('keydown', (e) => {
+                if (!lightbox.classList.contains('active')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') nextImage();
+                if (e.key === 'ArrowLeft') prevImage();
+            });
         });
     </script>
     <script src="script.js"></script>
