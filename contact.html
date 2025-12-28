@@ -116,6 +116,36 @@
             .form-grid { grid-template-columns: 1fr; }
             .calendar-wrapper iframe { height: 400px; }
         }
+        /* МОБИЛНА ВЕРСИЯ - ПОПРАВКА НА ФОРМАТА */
+        @media (max-width: 600px) {
+            .booking-form-wrapper {
+                padding: 15px !important; /* По-малко отстояние отстрани */
+                text-align: left !important; /* Подравнява текстовете вляво */
+            }
+
+            .form-group {
+                text-align: left !important; /* Гарантира, че етикетите са вляво */
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            input, select, textarea {
+                width: 100% !important; /* Пълна ширина */
+                max-width: 100% !important;
+                box-sizing: border-box !important; /* Да не излизат извън екрана */
+                margin: 0 !important; /* Премахва странни отстояния */
+            }
+
+            .submit-btn {
+                width: 100% !important; /* Бутонът става цял ред (по-удобно) */
+                margin-top: 10px;
+            }
+            
+            /* Центриране само на заглавието на секцията */
+            .section-title, .section-subtitle {
+                text-align: center !important;
+            }
+        }
     </style>
 </head>
 <body class="contact-page">
@@ -216,5 +246,6 @@
     <footer>© Kriskata</footer>
 </body>
 </html>
+
 
 
