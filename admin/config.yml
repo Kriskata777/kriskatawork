@@ -1,22 +1,51 @@
 backend:
   name: git-gateway
-  branch: main  # Увери се, че branch-ът в GitHub е 'main', а не 'master'
+  branch: main
 
 media_folder: "Photography/Uploads"
 public_folder: "/Photography/Uploads"
 
+# Тази настройка прави имената на качените файлове безопасни (на латиница)
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
 collections:
+  # 1. СЕКЦИЯ: РЕДАКТИРАНЕ НА СТРАНИЦИ
+  - name: "pages"
+    label: "Страници на сайта"
+    files:
+      - name: "home"
+        label: "Начална страница (Home)"
+        file: "data/home.json"
+        fields:
+          - {label: "Заглавие (Hero)", name: "hero_title", widget: "string", default: "Най-разглеждани"}
+          - {label: "Бутон 1", name: "btn_1", widget: "string", default: "ОБРАБОТЕНИ ВИДЕА"}
+          - {label: "Бутон 2", name: "btn_2", widget: "string", default: "ЗАСНЕТИ ВИДЕА"}
+
+  # 2. СЕКЦИЯ: ФОТО АЛБУМИ (Поправена и подобрена)
   - name: "data"
-    label: "Site Data"
+    label: "Управление на Албуми"
     files:
       - name: "albums"
-        label: "Photo Albums"
-        file: "data.json"
+        label: "Фото Албуми"
+        file: "data.json"      # Запазваме стария файл, за да не загубиш албумите
+        label_singular: "Албум"
         fields:
-          - label: "Albums"
+          - label: "Списък с албуми"
             name: "albums"
             widget: "list"
+            summary: "{{title}}"  # <--- ТОВА ОПРАВЯ БЪГА С ПОВТАРЯЩИТЕ СЕ КОРИЦИ!
             fields:
-              - {label: "ID (URL Name)", name: "id", widget: "string"}
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Cover Image", name: "cover", widget: "image"}
+              - {label: "ID (URL Name)", name: "id", widget: "string", hint: "напр. koleda-2025 (само латиница)"}
+              - {label: "Заглавие", name: "title", widget: "string"}
+              - {label: "Дата", name: "date", widget: "datetime", format: "DD.MM.YYYY", required: false}
+              - {label: "Корица (Cover Image)", name: "cover", widget: "image"}
+              
+              # Новата функционалност за много снимки
+              - label: "Галерия снимки"
+                name: "photos"
+                widget: "list"
+                fields:
+                  - {label: "Снимка", name: "image", widget: "image"}
