@@ -46,7 +46,7 @@
         position: relative; /* Allow dropdown positioning */
     }
 
-    .hamburger {
+    .class {
         cursor: pointer;
         display: flex;
         flex-direction: column;
@@ -1184,7 +1184,11 @@ footer {
         display: block; /* Show the hamburger menu on small screens */
     }
 }
-
+.hero {
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+}
 /* General Reset */
 * {
     margin: 0;
@@ -1192,6 +1196,84 @@ footer {
     box-sizing: border-box;
 }
 
+/* --- ФИНАЛЕН КОД: ЛОГО ЦЕНТЪР, МЕНЮ ДЯСНО, ЕДИН РЕД --- */
+
+header {
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    align-items: center;          /* ЕДНА ЛИНИЯ */
+    justify-content: space-between;
+
+    padding: 0 150px;
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+
+/* --- ЛОГОТО (Абсолютен център) --- */
+/* Хващаме го по всички възможни начини */
+header > a:first-child, 
+.logo-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+
+/* Картинката на логото */
+header > a:first-child img, 
+.logo-img {
+    height: 60px !important; /* Размер */
+    width: auto !important;
+    display: block !important;
+    margin-top: 15px !important; /* Това сваля логото надолу, за да не се реже */
+    border: none !important;
+}
+
+.desktop-menu li:last-child {
+    margin-right: 30px; /* увеличавай при нужда */
+}
+
+.desktop-menu {
+    display: flex;
+    position: relative;
+    top: 17px;
+    gap: 21px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.desktop-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+
+.desktop-menu a:hover {
+    color: #ff4444 !important;
+}
+
+/* Скриване на мобилно */
+@media (max-width: 768px) {
+    .desktop-menu { display: none !important; }
+}
 /* Main container to center everything */
 .page-container {
     min-height: 100%;

@@ -9,33 +9,36 @@
 </head>
 <body class="photography-page">
     
- <header>
-        <div class="logo-container">
-            <a href="home.html">
-                <img src="logo.png" alt="My Logo" class="logo"> <!-- Add your logo image here -->
-            </a>
-        </div>
-        <nav>
-            <nav>
-                <div class="hamburger" onclick="toggleMenu()">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-                <ul class="dropdown-content">
-                    <li><a href="work.html" class="menu-link">Категории</a></li>
-                    <li><a href="contact.html" class="menu-link">Контакти</a></li>
-                </ul>
-                <ul class="menu">
-                    <li><a href="work.html" class="menu-link">Категории</a></li>
-                    <li><a href="contact.html" class="menu-link">Контакти</a></li>
-                </ul>
-            </nav>
-            
-            <script src="menu.js"></script>
-        </nav>
-    </header>
+<header>
+    <div class="logo-container">
+        <a href="home.html">
+            <img src="logo.png" alt="My Logo" class="logo">
+        </a>
+    </div>
 
+    <nav>
+        <ul class="desktop-menu">
+            <li><a href="work.html">Категории</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+        </ul>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+</header>
+
+
+        <ul class="dropdown-content">
+            <li><a href="work.html" class="menu-link">Категории</a></li>
+            <li><a href="contact.html" class="menu-link">Контакти</a></li>
+        </ul>
+
+    <script src="menu.js"></script>
+</body>
+    </header>
     <header class="hero" style="text-align: center; margin-top: 20px;">
         <h2 id="album-title">Loading...</h2>
         <a href="photography.html" style="color: #bbb; text-decoration: none; font-size: 0.9rem;">← Назад към всички албуми</a>

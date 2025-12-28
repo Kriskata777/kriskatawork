@@ -10,22 +10,27 @@
 <body>
     <canvas id="starCanvas"></canvas> <!-- Add the canvas element here -->
     
-     <header>
-        <div class="logo-container">
-            <a href="home.html">
-                <img src="logo.png" alt="My Logo" class="logo"> <!-- Add your logo image here -->
-            </a>
+<header>
+    <div class="logo-container">
+        <a href="home.html">
+            <img src="logo.png" alt="My Logo" class="logo">
+        </a>
+    </div>
+
+    <nav>
+        <ul class="desktop-menu">
+            <li><a href="work.html">Категории</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+        </ul>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
-    <body>
-        <header>
-            <nav>
-                <div class="hamburger" onclick="toggleMenu()">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-            </nav>
-        </header>
+    </nav>
+</header>
+
 
         <ul class="dropdown-content">
             <li><a href="work.html" class="menu-link">Категории</a></li>
