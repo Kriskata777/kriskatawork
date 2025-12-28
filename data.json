@@ -1,6 +1,116 @@
 {
   "albums": [
     {
+      "id": "kukeri",
+      "title": "Кукерско Шествие",
+      "date": "27.12.2025",
+      "cover": "/Photography/Uploads/dsc06722-enhanced-nr.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/dsc06722-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06818-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06841-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06841-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06729-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06859-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06732-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06734-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06740-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06741-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06760-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06769-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06799-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06834-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06868-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06871-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06982-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06978-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06902-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06909-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06923-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06925-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06929-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06941-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06963-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06994-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06998-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc07003-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc07014-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc07033-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc07044-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc07059-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc07078-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc07086-enhanced-nr.jpg"
+        }
+      ]
+    },
+    {
       "id": "prolet",
       "title": "Кюстендилска пролет",
       "cover": "/Photography/Horizontal/Кюстендилска пролет/1.jpg",
@@ -182,116 +292,6 @@
         "/Photography/Horizontal/Празник на плодородието/11.jpg",
         "/Photography/Horizontal/Празник на плодородието/12.jpg",
         "/Photography/Horizontal/Празник на плодородието/13.jpg"
-      ]
-    },
-    {
-      "id": "kukeri",
-      "title": "Кукерско Шествие",
-      "date": "27.12.2025",
-      "cover": "/Photography/Uploads/dsc06722-enhanced-nr.jpg",
-      "photos": [
-        {
-          "image": "/Photography/Uploads/dsc06722-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06818-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06841-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06841-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06729-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06859-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06732-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06734-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06740-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06741-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06760-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06769-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06799-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06834-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06868-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06871-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06982-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06978-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06902-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06909-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06923-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06925-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06929-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06941-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06963-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06994-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc06998-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc07003-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc07014-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc07033-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc07044-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc07059-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc07078-enhanced-nr.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/dsc07086-enhanced-nr.jpg"
-        }
       ]
     }
   ]
