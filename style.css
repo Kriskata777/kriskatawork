@@ -59,26 +59,62 @@
         margin: 3px 0; /* Space between the lines */
     }
 
-    nav .dropdown-content {
-        display: none; /* Hide the dropdown content by default */
-        position: absolute; /* Position it relative to the dropdown */
-        right: 0; /* Align it to the right of the hamburger */
-        background-color: #2f3136; /* Background color of dropdown */
-        min-width: 120px; /* Minimum width of dropdown */
-        z-index: 1000; /* Ensure dropdown appears above other content */
-    }
+/* --- НОВ МОДЕРЕН ДИЗАЙН ЗА МОБИЛНО МЕНЮ --- */
 
-    .hamburger:hover + .dropdown-content,
-    .dropdown-content:hover {
-        display: block; /* Show dropdown on hover */
-    }
+/* --- FULLSCREEN МОБИЛНО МЕНЮ --- */
 
-    nav .dropdown-content a {
-        color: white; /* Color for dropdown links */
-        padding: 10px; /* Padding for dropdown links */
-        text-decoration: none; /* Remove underline from dropdown links */
-        display: block; /* Make links block-level for easier clicking */
-    }
+/* --- FULLSCREEN МЕНЮ (Поправено) --- */
+
+/* --- ФИНАЛНА ПОПРАВКА НА МЕНЮТО --- */
+
+.dropdown-content {
+    /* Гарантирано фиксиране към екрана */
+    position: fixed !important; 
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    
+    width: 100vw !important; /* 100% от ширината на екрана */
+    height: 100vh !important; /* 100% от височината */
+    
+    background-color: #111; /* Черен фон */
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+    
+    /* Скрито по подразбиране */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    
+    /* Премахваме всякакви стари стилове за списъци */
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+/* Когато е отворено */
+.dropdown-content.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Линковете */
+.dropdown-content a {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
+    display: block;
+}
+/* Анимация */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
     .projects {
         text-align: center;
@@ -1055,7 +1091,7 @@ footer {
     position: absolute;
     top: 60px; /* Increase this value to move the menu lower */
     right: 20px; /* Align to the right */
-    background-color: #2b3b63; /* Background color */
+    background-color: #0066ff; /* Background color */
     min-width: 120px; /* Minimum width */
     padding: 10px 0; /* Padding for the dropdown items */
     border-radius: 4px; /* Optional: Rounded corners */
@@ -1072,28 +1108,33 @@ footer {
     display: block; /* Block for better clickability */
 }
 
-/* Hamburger Menu */
 .hamburger {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 20px;
-    right: 20px;
-    gap: 5px;
-}
-
-.hamburger .line {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-}
-
-/* Show Dropdown When Active */
-.hamburger.active + .dropdown-content {
+    /* ВАЖНО: Фиксираме го горе вдясно */
+    position: fixed !important;
+    top: 25px;       
+    right: 25px;
+    z-index: 10001;  /* Най-отгоре над всичко */
+    
+    /* Премахваме всякакви стари центрирания */
+    margin: 0 !important;
+    transform: none; /* Освен ако не е active */
     display: block;
 }
 
+/* Запазваме само анимацията на въртене, когато е активен */
+.hamburger.active .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: #ff4444;
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: #ff4444;
+}
     
 
     .menu.menu-active {

@@ -1,16 +1,16 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const dropdown = document.querySelector(".menu.dropdown-content");
+function toggleMenu() {
+    const menu = document.querySelector('.dropdown-content');
+    const hamburger = document.querySelector('.hamburger');
+    
+    // Превключва класовете
+    menu.classList.toggle('show');
+    hamburger.classList.toggle('active');
+}
 
-    hamburger.addEventListener("click", function () {
-        // Toggle 'active' class on hamburger
-        hamburger.classList.toggle("active");
-
-        // Show/hide dropdown menu
-        if (dropdown.style.display === "block") {
-            dropdown.style.display = "none";
-        } else {
-            dropdown.style.display = "block";
-        }
+// Затваряне на менюто при клик върху линк
+document.querySelectorAll('.dropdown-content a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.dropdown-content').classList.remove('show');
+        document.querySelector('.hamburger').classList.remove('active');
     });
 });

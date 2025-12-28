@@ -116,6 +116,7 @@
             .form-grid { grid-template-columns: 1fr; }
             .calendar-wrapper iframe { height: 400px; }
         }
+
         /* МОБИЛНА ВЕРСИЯ - ПОПРАВКА НА ФОРМАТА */
         @media (max-width: 600px) {
             .booking-form-wrapper {
@@ -156,31 +157,30 @@
                 <img src="logo.png" alt="My Logo" class="logo"> <!-- Add your logo image here -->
             </a>
         </div>
-        <nav>
+    <body>
+        <header>
             <nav>
                 <div class="hamburger" onclick="toggleMenu()">
                     <div class="line"></div>
                     <div class="line"></div>
                     <div class="line"></div>
                 </div>
-                <ul class="dropdown-content">
-                    <li><a href="work.html" class="menu-link">Категории</a></li>
-                    <li><a href="contact.html" class="menu-link">Контакти</a></li>
-                </ul>
-                <ul class="menu">
-                    <li><a href="work.html" class="menu-link">Категории</a></li>
-                    <li><a href="contact.html" class="menu-link">Контакти</a></li>
-                </ul>
             </nav>
-            
-            <script src="menu.js"></script>
-        </nav>
+        </header>
+
+        <ul class="dropdown-content">
+            <li><a href="work.html" class="menu-link">Категории</a></li>
+            <li><a href="contact.html" class="menu-link">Контакти</a></li>
+        </ul>
+
+    <script src="menu.js"></script>
+</body>
     </header>
 
     <div class="contact-container">
         
         <h2 class="section-title">Календар</h2>
-        <p class="section-subtitle">Проверете свободните дати</p>
+        <p class="section-subtitle"> </p>
         
         <div class="calendar-wrapper">
             <iframe src="https://calendar.google.com/calendar/embed?src=2355c4f43d405953860e644215fdfac30b873d44e48613cd4e23e61dbe047e7e%40group.calendar.google.com&ctz=Europe%2FSofia" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
@@ -188,7 +188,7 @@
 
         <div class="booking-form-wrapper">
             <h2 class="section-title">Направете запитване</h2>
-            <p class="section-subtitle">Харесахте си свободна дата? Изпратете ми заявка</p>
+            <p class="section-subtitle"></p>
             
 
             <form action="https://formspree.io/f/mwpedjpy" method="POST">
@@ -246,7 +246,3 @@
     <footer>© Kriskata</footer>
 </body>
 </html>
-
-
-
-
