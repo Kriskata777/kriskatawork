@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography</title>
+    <title>Photography | Kriskata</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo.png" type="image/png">
 </head>
 <body>
-    <canvas id="starCanvas"></canvas>
     
 <header>
     <div class="logo-container">
@@ -30,24 +29,22 @@
         </div>
     </nav>
 </header>
-
-
-        <ul class="dropdown-content">
-            <li><a href="work.html" class="menu-link">Категории</a></li>
-            <li><a href="contact.html" class="menu-link">Контакти</a></li>
-        </ul>
-
-    <script src="menu.js"></script>
-</body>
-    </header>
+<ul class="dropdown-content">
+    <li><a href="work.html" class="menu-link">Категории</a></li>
+    <li><a href="contact.html" class="menu-link">Контакти</a></li>
+</ul>
+<script src="menu.js"></script>
 
     <section class="categories">
-        <h1 style="color: white; margin-bottom: 40px;">Фотография</h1>
+        <h1 style="color: white; margin-bottom: 40px; margin-top: 40px; text-align: center;">Фотография</h1>
         
         <div class="album-grid" id="album-grid">
-            <p style="color: #666; width: 100%; text-align: center;">Loading albums...</p>
-        </div>
+            </div>
     </section>
+
+    <footer>
+        © Kriskata
+    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -55,97 +52,98 @@
                 .then(res => res.json())
                 .then(data => {
                     const grid = document.getElementById('album-grid');
-                    grid.innerHTML = ''; // Clear loading message
+                    // Взимаме албумите от правилната структура
+                    const albums = data.albums || (data.data && data.data.albums) || [];
+                    
+                    grid.innerHTML = ''; 
 
-                    data.albums.forEach(album => {
+                    albums.forEach(album => {
                         const link = document.createElement('a');
                         link.href = `album.html?id=${album.id}`;
                         link.className = 'album-card';
                         
+                        // Чистене на пътя (ако има public/)
+                        let cleanCover = album.cover ? album.cover.replace('public/', '') : 'logo.png';
+
                         link.innerHTML = `
                             <div class="album-image-wrapper">
-                                <img src="${album.cover}" alt="${album.title}">
-                                <div class="album-overlay">
+                                <img src="${cleanCover}" alt="${album.title}" loading="lazy">
+                                <div class="album-text">
                                     <h2>${album.title}</h2>
                                 </div>
                             </div>
                         `;
                         grid.appendChild(link);
                     });
-                });
+                })
+                .catch(err => console.error("Error:", err));
         });
     </script>
 
     <style>
-        body { background-color: #222; }
+        body { background-color: #222; margin: 0; padding: 0; font-family: sans-serif; }
 
+        /* --- РЕШЕТКА (GRID) - ТОВА ОПРАВЯ РАЗМЕРИТЕ --- */
         .album-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
+            display: grid;
+            /* Всички кутийки стават еднакви! (мин. 350px ширина) */
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px; /* Разстояние между тях */
             padding: 20px;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
         .album-card {
             text-decoration: none;
-            flex: 1 1 300px;
-            max-width: 450px;
+            display: block;
         }
 
         .album-image-wrapper {
             position: relative;
             overflow: hidden;
-            border-radius: 10px;
-            aspect-ratio: 16 / 9;
+            border-radius: 8px;
+            /* ТОВА Е КЛЮЧЪТ: Фиксираме пропорцията на 16:9 (като YouTube видео) */
+            /* Ако искаш да са по-високи, направи го 4 / 3 */
+            aspect-ratio: 16 / 9; 
+            background: #333;
+            transition: transform 0.3s ease;
         }
 
         .album-image-wrapper img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Изрязва излишното, за да пасне точно в кутийката */
             display: block;
-            transition: transform 0.5s ease;
         }
 
-        .album-overlay {
+        /* --- ТЕКСТ ВЪРХУ СНИМКАТА --- */
+        .album-text {
             position: absolute;
-            top: 0;
+            bottom: 0;      /* Залепен долу */
             left: 0;
             width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: background-color 0.3s ease;
-        }
-
-        .album-overlay h2 {
-            color: white;
-            font-size: 1.8rem;
+            padding: 15px;
+            /* Лек градиент САМО зад текста, за да се чете, без да затъмнява цялата снимка */
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
             text-align: center;
-            padding: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .album-text h2 {
+            color: white;
+            font-size: 1.4rem;
             margin: 0;
+            text-shadow: 1px 1px 3px black;
         }
 
-        .album-card:hover .album-overlay {
-            background-color: rgba(0, 0, 0, 0.3);
+        /* Ефект при минаване с мишката */
+        .album-card:hover .album-image-wrapper {
+            transform: scale(1.02); /* Леко увеличаване */
         }
-
-        .album-card:hover img {
-            transform: scale(1.05);
+        
+        @media (max-width: 600px) {
+            .album-grid { grid-template-columns: 1fr; }
         }
     </style>
-
-    <footer>
-        © Kriskata
-    </footer>
-    
-
-    </script>
 </body>
 </html>
