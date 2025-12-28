@@ -6,6 +6,76 @@
     <title>Album View</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo.png" type="image/png">
+    
+    <style>
+        body { background-color: #222; margin: 0; padding: 0; color: white; font-family: sans-serif; }
+        
+        /* Стилове за решетката от снимки */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Автоматични колони */
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .photo-item {
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+            height: 250px; /* Фиксирана височина за равен ред */
+        }
+
+        .photo-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .photo-thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Изрязва снимката, за да пасне идеално */
+            display: block;
+        }
+
+        /* Стилове за Lightbox (Пълен екран) */
+        .lightbox {
+            display: none; /* Скрито по подразбиране */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox.active {
+            display: flex; /* Показва се с клас active */
+        }
+
+        .lightbox-content img {
+            max-width: 90%;
+            max-height: 90vh;
+            border: 2px solid white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+        }
+    </style>
 </head>
 <body class="photography-page">
     
@@ -29,36 +99,27 @@
         </div>
     </nav>
 </header>
+<ul class="dropdown-content">
+    <li><a href="work.html" class="menu-link">Категории</a></li>
+    <li><a href="contact.html" class="menu-link">Контакти</a></li>
+</ul>
+<script src="menu.js"></script>
 
-
-        <ul class="dropdown-content">
-            <li><a href="work.html" class="menu-link">Категории</a></li>
-            <li><a href="contact.html" class="menu-link">Контакти</a></li>
-        </ul>
-
-    <script src="menu.js"></script>
-</body>
-    </header>
-    <header class="hero" style="text-align: center; margin-top: 20px;">
-        <h2 id="album-title">Loading...</h2>
+    <header class="hero" style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
+        <h2 id="album-title">Зареждане...</h2>
         <a href="photography.html" style="color: #bbb; text-decoration: none; font-size: 0.9rem;">← Назад към всички албуми</a>
     </header>
 
-    <div class="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <div class="lightbox-nav lightbox-prev"></div>
-        <div class="lightbox-content"><img class="lightbox-image"></div>
-        <div class="lightbox-nav lightbox-next"></div>
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img class="lightbox-image" id="lightbox-img" src="">
+        </div>
     </div>
 
-    <div class="photo-gallery" id="gallery-container">
-        </div>
-
-    <style>
-        body { background-color: #222; margin: 0; padding: 0; }
-    </style>
+    <div class="photo-gallery" id="gallery-container"></div>
     
-    <footer>© Kriskata</footer>
+    <footer style="text-align: center; padding: 20px; color: #666;">© Kriskata</footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -71,33 +132,52 @@
             fetch('data.json')
                 .then(response => response.json())
                 .then(data => {
-                    // 2. Find the correct album
-                    const album = data.albums.find(a => a.id === albumId);
+                    // 2. Намиране на правилния албум
+                    // (Търси или в data.albums или в data.data.albums в зависимост от CMS структурата)
+                    const albumsList = data.albums || (data.data && data.data.albums) || [];
+                    const album = albumsList.find(a => a.id === albumId);
 
                     if (!album) {
-                        titleElement.innerText = "Album Not Found";
+                        titleElement.innerText = "Албумът не е намерен";
                         return;
                     }
 
-                    // 3. Update Page Info
+                    // 3. Обновяване на заглавието
                     titleElement.innerText = album.title;
                     document.title = album.title + " | Kriskata";
 
-                    // 4. Generate Images
-                    album.images.forEach(imgSrc => {
+                    // 4. Генериране на снимките (СЪВМЕСТИМОСТ С НОВИЯ CMS)
+                    // Проверяваме дали има поле 'photos' (новия CMS) или 'images' (стария код)
+                    let imagesToDisplay = [];
+                    
+                    if (album.photos && Array.isArray(album.photos)) {
+                        // Ако е от новия админ панел, снимките са обекти {image: 'path', ...}
+                        imagesToDisplay = album.photos.map(p => p.image);
+                    } else if (album.images && Array.isArray(album.images)) {
+                        // Ако е стар ръчен албум
+                        imagesToDisplay = album.images;
+                    }
+
+                    if (imagesToDisplay.length === 0) {
+                        container.innerHTML = "<p style='text-align:center; width:100%;'>Няма добавени снимки в този албум.</p>";
+                    }
+
+                    imagesToDisplay.forEach(imgSrc => {
+                        // Поправка на пътя ако CMS-а връща 'public/...'
+                        let cleanSrc = imgSrc.replace('public/', ''); 
+
                         const div = document.createElement('div');
                         div.className = 'photo-item';
-                        // Add specific class based on path (optional detection)
-                        if (imgSrc.includes('/Vertical/')) {
-                            div.classList.add('vertical');
-                        } else {
-                            div.classList.add('horizontal');
-                        }
                         
                         const img = document.createElement('img');
-                        img.src = imgSrc;
+                        img.src = cleanSrc;
                         img.className = 'photo-thumb';
                         img.loading = 'lazy';
+                        
+                        // Добавяне на Click Event за отваряне на Lightbox
+                        div.addEventListener('click', () => {
+                            openLightbox(cleanSrc);
+                        });
                         
                         div.appendChild(img);
                         container.appendChild(div);
@@ -105,7 +185,26 @@
                 })
                 .catch(err => console.error("Error loading album data:", err));
         });
+
+        // --- LIGHTBOX ФУНКЦИИ ---
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+        }
+
+        // Затваряне при клик извън снимката
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
     </script>
-    <script src="script.js"></script>
 </body>
 </html>
