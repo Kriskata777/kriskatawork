@@ -183,6 +183,35 @@
         "/Photography/Horizontal/Празник на плодородието/12.jpg",
         "/Photography/Horizontal/Празник на плодородието/13.jpg"
       ]
+    },
+    {
+      "id": "kukeri",
+      "title": "Кукерско Шествие",
+      "date": "27.12.2025",
+      "cover": "/Photography/Uploads/dsc06722-enhanced-nr.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/dsc06722-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06818-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06841-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06841-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06729-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc06859-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc07044-enhanced-nr.jpg"
+        }
+      ]
     }
   ]
 }
