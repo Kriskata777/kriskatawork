@@ -120,24 +120,31 @@
 </head>
 <body class="contact-page">
     
-    <header>
+ <header>
         <div class="logo-container">
-            <a href="home.html"><img src="logo.png" alt="My Logo" class="logo"></a>
+            <a href="home.html">
+                <img src="logo.png" alt="My Logo" class="logo"> <!-- Add your logo image here -->
+            </a>
         </div>
         <nav>
-            <div class="hamburger" onclick="toggleMenu()">
-                <div class="line"></div><div class="line"></div><div class="line"></div>
-            </div>
-            <ul class="dropdown-content">
-                <li><a href="photography.html" class="menu-link">Портфолио</a></li>
-                <li><a href="contact.html" class="menu-link">Контакт</a></li>
-            </ul>
-            <ul class="menu">
-                <li><a href="photography.html" class="menu-link">Портфолио</a></li>
-                <li><a href="contact.html" class="menu-link">Контакт</a></li>
-            </ul>
+            <nav>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <ul class="dropdown-content">
+                    <li><a href="work.html" class="menu-link">Work</a></li>
+                    <li><a href="contact.html" class="menu-link">Contact</a></li>
+                </ul>
+                <ul class="menu">
+                    <li><a href="work.html" class="menu-link">Work</a></li>
+                    <li><a href="contact.html" class="menu-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <script src="menu.js"></script>
         </nav>
-        <script src="menu.js"></script>
     </header>
 
     <div class="contact-container">
@@ -153,54 +160,55 @@
             <h2 class="section-title">Направете запитване</h2>
             <p class="section-subtitle">Харесахте си свободна дата? Изпратете ми заявка и ще потвърдя скоро.</p>
             
-            <form name="booking" method="POST" data-netlify="true">
 
-            <form action="https://formspree.io/f/mwpedjpy" method="POST">  
-                
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label>Вашето име</label>
-                        <input type="text" name="name" placeholder="Иван Петров" required>
-                    </div>
+            <form action="https://formspree.io/f/mwpedjpy" method="POST">
 
-                    <div class="form-group">
-                        <label>Вашият Email</label>
-                        <input type="email" name="email" placeholder="ivan@example.com" required>
-                    </div>
+        <div class="form-grid">
+        <div class="form-group">
+            <label>Вашето име</label>
+            <input type="text" name="name" placeholder="Иван Петров" required>
+        </div>
 
-                    <div class="form-group">
-                        <label>Желана дата</label>
-                        <input type="date" name="date" required>
-                    </div>
+        <div class="form-group">
+            <label>Вашият Email</label>
+            <input type="email" name="email" placeholder="ivan@example.com" required>
+        </div>
 
-                    <div class="form-group">
-                        <label>Желан час</label>
-                        <select name="time">
-                            <option value="morning">Сутрин (09:00 - 12:00)</option>
-                            <option value="afternoon">Следобед (13:00 - 17:00)</option>
-                            <option value="evening">Вечер (18:00+)</option>
-                            <option value="full-day">Цял ден</option>
-                        </select>
-                    </div>
+        <div class="form-group">
+            <label>Желана дата</label>
+            <input type="date" name="date" required>
+        </div>
 
-                    <div class="form-group full-width">
-                        <label>Тип заснемане</label>
-                        <select name="type">
-                            <option value="portrait">Портретно / Лично</option>
-                            <option value="event">Събитие / Парти</option>
-                            <option value="commercial">Рекламно / Продуктово</option>
-                            <option value="other">Друго</option>
-                        </select>
-                    </div>
+        <div class="form-group">
+            <label>Желан час</label>
+            <select name="time">
+                <option value="morning">Сутрин (09:00 - 12:00)</option>
+                <option value="afternoon">Следобед (13:00 - 17:00)</option>
+                <option value="evening">Вечер (18:00+)</option>
+                <option value="full-day">Цял ден</option>
+            </select>
+        </div>
 
-                    <div class="form-group full-width">
-                        <label>Съобщение / Детайли</label>
-                        <textarea name="message" rows="5" placeholder="Разкажете ми малко повече за идеята си..."></textarea>
-                    </div>
-                </div>
+        <div class="form-group full-width">
+            <label>Тип заснемане</label>
+            <select name="type">
+                <option value="portrait">Портретно / Лично</option>
+                <option value="event">Събитие / Парти</option>
+                <option value="commercial">Рекламно / Продуктово</option>
+                <option value="other">Друго</option>
+            </select>
+        </div>
 
-                <button type="submit" class="submit-btn">Изпрати запитване</button>
-            </form>
+        <div class="form-group full-width">
+            <label>Съобщение / Детайли</label>
+            <textarea name="message" rows="5"
+                placeholder="Разкажете ми малко повече за идеята си..."></textarea>
+        </div>
+    </div>
+
+    <button type="submit" class="submit-btn">Изпрати запитване</button>
+</form>
+
         </div>
 
     </div>
