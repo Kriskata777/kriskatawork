@@ -1,11 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covers</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your external CSS file -->
-    <link rel="icon" href="logo.png" sizes="32x32" type="image/png"> <!-- Favicon -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png" sizes="32x32" type="image/png">
+    
+    <style>
+        body { background-color: #222; margin: 0; padding: 0; font-family: sans-serif; }
+        
+        /* --- СТИЛОВЕ ЗА СНИМКИТЕ --- */
+        .project-list-thumbnails11 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .thumbnail-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #333;
+            min-height: 200px;
+        }
+
+        .thumbnail-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            z-index: 2;
+        }
+
+        .thumbnail-image11 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* --- LIGHTBOX (Пълен екран) --- */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.95);
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+        }
+
+        .lightbox.active { display: flex; }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90vh;
+        }
+
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 90vh;
+            border: 2px solid #fff;
+            box-shadow: 0 0 30px rgba(0,0,0,0.9);
+            object-fit: contain;
+        }
+
+        /* Стрелки */
+        .lightbox-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+            padding: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            background: rgba(0,0,0,0.3);
+            border-radius: 5px;
+        }
+        .lightbox-btn:hover { background: rgba(255,255,255,0.2); }
+        .prev { left: 20px; }
+        .next { right: 20px; }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #ddd;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: 2001;
+        }
+        .lightbox-close:hover { color: #fff; }
+    </style>
 </head>
 <body>
     
@@ -21,59 +120,106 @@
             <li><a href="work.html">Категории</a></li>
             <li><a href="contact.html">Контакти</a></li>
         </ul>
-
         <div class="hamburger" onclick="toggleMenu()">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+            <div class="line"></div><div class="line"></div><div class="line"></div>
         </div>
     </nav>
 </header>
-
-
-        <ul class="dropdown-content">
-            <li><a href="work.html" class="menu-link">Категории</a></li>
-            <li><a href="contact.html" class="menu-link">Контакти</a></li>
-        </ul>
-
-    <script src="menu.js"></script>
-</body>
-    </header>
+<ul class="dropdown-content">
+    <li><a href="work.html" class="menu-link">Категории</a></li>
+    <li><a href="contact.html" class="menu-link">Контакти</a></li>
+</ul>
+<script src="menu.js"></script>
 
     <section class="projects">
-        <h1>Covers</h1>
-        <div class="project-list-thumbnails11">
+        <h1 style="text-align: center; color: white; margin: 40px 0;">Covers</h1>
+        
+        <div class="project-list-thumbnails11" id="covers-container">
+            
             <div class="thumbnail-container">
-                <img src="/Covers/Жоро и Гената - cover.png" alt="Cover 2" class="thumbnail-image11"> <!-- Replace with your image -->
+                <img src="/Covers/Жоро и Гената - cover.png" alt="Cover 2" class="thumbnail-image11">
             </div>
+            
             <div class="thumbnail-container">
-                <img src="/Covers/Banner - FINAL.jpg" alt="Cover 1" class="thumbnail-image11"> <!-- Replace with your image -->
+                <img src="/Covers/Banner - FINAL.jpg" alt="Cover 1" class="thumbnail-image11">
             </div>
+            
             <div class="thumbnail-container">
-                <img src="/Covers/Cover - Mitko Marianoff x Lucho - Отвъдното на любовта.png" alt="Cover 2" class="thumbnail-image11"> <!-- Replace with your image -->
+                <img src="/Covers/Cover - Mitko Marianoff x Lucho - Отвъдното на любовта.png" alt="Cover 2" class="thumbnail-image11">
             </div>
-            <!-- Add more cover images as needed -->
-        </div>
+            
+            </div>
     </section>
 
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-btn prev" onclick="changeImage(-1)">&#10094;</div>
+        <div class="lightbox-btn next" onclick="changeImage(1)">&#10095;</div>
+        <div class="lightbox-content">
+            <img class="lightbox-image" id="lightbox-img" src="">
+        </div>
+    </div>
+
     <script>
-        function toggleDropdown() {
-            const dropdownContent = document.querySelector('.dropdown-content');
-            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        // АВТОМАТИЧНО ОТКРИВАНЕ НА СНИМКИТЕ В СТРАНИЦАТА
+        let currentImages = [];
+        let currentIndex = 0;
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            // Намира всички снимки, които вече са в HTML-а
+            const imgElements = document.querySelectorAll('.thumbnail-image11');
+            
+            imgElements.forEach((img, index) => {
+                // Добавя пътя в списъка за Lightbox-а
+                currentImages.push(img.src);
+                
+                // Прави картинката да се клика
+                img.parentElement.addEventListener('click', () => {
+                    openLightbox(index);
+                });
+            });
+        });
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(index) {
+            currentIndex = index;
+            updateLightboxImage();
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex >= currentImages.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = currentImages.length - 1;
+            updateLightboxImage();
+        }
+
+        function updateLightboxImage() {
+            lightboxImg.src = currentImages[currentIndex];
+        }
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') changeImage(-1);
+            if (e.key === 'ArrowRight') changeImage(1);
+        });
     </script>
 
-<style>
-    body {
-        background-color: #222; /* dark gray */
-        margin: 0;
-        padding: 0;
-    }
-</style>
-
-<footer>
-    © Kriskata
-</footer>
-
+    <footer>
+        © Kriskata
+    </footer>
 </body>
 </html>
