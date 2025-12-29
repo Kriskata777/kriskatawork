@@ -5,47 +5,100 @@ backend:
 media_folder: "Photography/Uploads"
 public_folder: "/Photography/Uploads"
 
-# Тази настройка прави имената на качените файлове безопасни (на латиница)
 slug:
   encoding: "ascii"
   clean_accents: true
   sanitize_replacement: "-"
 
 collections:
-  # 1. СЕКЦИЯ: РЕДАКТИРАНЕ НА СТРАНИЦИ
+  # 1. СТРАНИЦИ (Home Page)
   - name: "pages"
-    label: "Страници на сайта"
+    label: "Настройки на Начална страница"
     files:
       - name: "home"
         label: "Начална страница (Home)"
         file: "data/home.json"
         fields:
           - {label: "Заглавие (Hero)", name: "hero_title", widget: "string", default: "Най-разглеждани"}
-          - {label: "Бутон 1", name: "btn_1", widget: "string", default: "ОБРАБОТЕНИ ВИДЕА"}
-          - {label: "Бутон 2", name: "btn_2", widget: "string", default: "ЗАСНЕТИ ВИДЕА"}
 
-  # 2. СЕКЦИЯ: ФОТО АЛБУМИ (Поправена и подобрена)
-  - name: "data"
-    label: "Управление на Албуми"
+  # 2. ФОТОГРАФИЯ (Това си е старото, работещо)
+  - name: "albums"
+    label: "Фото Албуми"
     files:
       - name: "albums"
-        label: "Фото Албуми"
-        file: "data.json"      # Запазваме стария файл, за да не загубиш албумите
+        label: "Списък албуми"
+        file: "data.json"
         label_singular: "Албум"
         fields:
-          - label: "Списък с албуми"
+          - label: "Албуми"
             name: "albums"
             widget: "list"
-            summary: "{{title}}"  # <--- ТОВА ОПРАВЯ БЪГА С ПОВТАРЯЩИТЕ СЕ КОРИЦИ!
+            summary: "{{title}}"
             fields:
-              - {label: "ID (URL Name)", name: "id", widget: "string", hint: "напр. koleda-2025 (само латиница)"}
+              - {label: "ID (URL Name)", name: "id", widget: "string", hint: "напр. djamala (на латиница)"}
               - {label: "Заглавие", name: "title", widget: "string"}
-              - {label: "Дата", name: "date", widget: "datetime", format: "DD.MM.YYYY", required: false}
-              - {label: "Корица (Cover Image)", name: "cover", widget: "image"}
-              
-              # Новата функционалност за много снимки
+              - {label: "Корица", name: "cover", widget: "image"}
               - label: "Галерия снимки"
                 name: "photos"
                 widget: "list"
                 fields:
                   - {label: "Снимка", name: "image", widget: "image"}
+
+  # 3. ВИДЕА: ОБРАБОТЕНИ (НОВО!)
+  - name: "edited_videos"
+    label: "Обработени Видеа"
+    files:
+      - name: "edited"
+        label: "Списък видеа"
+        file: "data/edited_videos.json"
+        fields:
+          - label: "Видеа"
+            name: "videos"
+            widget: "list"
+            fields:
+              - {label: "Заглавие", name: "title", widget: "string"}
+              - {label: "YouTube ID", name: "youtube_id", widget: "string", hint: "Само кода от края на линка (напр. dQw4w9WgXcQ)"}
+
+  # 4. ВИДЕА: ЗАСНЕТИ (НОВО!)
+  - name: "filmed_videos"
+    label: "Заснети Видеа"
+    files:
+      - name: "filmed"
+        label: "Списък видеа"
+        file: "data/filmed_videos.json"
+        fields:
+          - label: "Видеа"
+            name: "videos"
+            widget: "list"
+            fields:
+              - {label: "Заглавие", name: "title", widget: "string"}
+              - {label: "YouTube ID", name: "youtube_id", widget: "string", hint: "Само кода от края на линка"}
+
+  # 5. THUMBNAILS (НОВО!)
+  - name: "thumbnails"
+    label: "Thumbnails"
+    files:
+      - name: "thumbs"
+        label: "Галерия Thumbnails"
+        file: "data/thumbnails.json"
+        fields:
+          - label: "Списък изображения"
+            name: "images"
+            widget: "list"
+            fields:
+              - {label: "Изображение", name: "image", widget: "image"}
+              - {label: "Заглавие (Alt Text)", name: "title", widget: "string", required: false}
+
+  # 6. COVERS (НОВО!)
+  - name: "covers"
+    label: "Covers (Корици)"
+    files:
+      - name: "covers"
+        label: "Галерия Covers"
+        file: "data/covers.json"
+        fields:
+          - label: "Списък изображения"
+            name: "images"
+            widget: "list"
+            fields:
+              - {label: "Изображение", name: "image", widget: "image"}
