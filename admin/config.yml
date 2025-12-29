@@ -21,7 +21,7 @@ collections:
         fields:
           - {label: "Заглавие (Hero)", name: "hero_title", widget: "string", default: "Най-разглеждани"}
 
-  # 2. ФОТОГРАФИЯ (Това си е старото, работещо)
+  # 2. ФОТОГРАФИЯ (Албуми)
   - name: "albums"
     label: "Фото Албуми"
     files:
@@ -43,62 +43,3 @@ collections:
                 widget: "list"
                 fields:
                   - {label: "Снимка", name: "image", widget: "image"}
-
-  # 3. ВИДЕА: ОБРАБОТЕНИ (НОВО!)
-  - name: "edited_videos"
-    label: "Обработени Видеа"
-    files:
-      - name: "edited"
-        label: "Списък видеа"
-        file: "data/edited_videos.json"
-        fields:
-          - label: "Видеа"
-            name: "videos"
-            widget: "list"
-            fields:
-              - {label: "Заглавие", name: "title", widget: "string"}
-              - {label: "YouTube ID", name: "youtube_id", widget: "string", hint: "Само кода от края на линка (напр. dQw4w9WgXcQ)"}
-
-  # 4. ВИДЕА: ЗАСНЕТИ (НОВО!)
-  - name: "filmed_videos"
-    label: "Заснети Видеа"
-    files:
-      - name: "filmed"
-        label: "Списък видеа"
-        file: "data/filmed_videos.json"
-        fields:
-          - label: "Видеа"
-            name: "videos"
-            widget: "list"
-            fields:
-              - {label: "Заглавие", name: "title", widget: "string"}
-              - {label: "YouTube ID", name: "youtube_id", widget: "string", hint: "Само кода от края на линка"}
-
-  # 5. THUMBNAILS (НОВО!)
-  - name: "thumbnails"
-    label: "Thumbnails"
-    files:
-      - name: "thumbs"
-        label: "Галерия Thumbnails"
-        file: "data/thumbnails.json"
-        fields:
-          - label: "Списък изображения"
-            name: "images"
-            widget: "list"
-            fields:
-              - {label: "Изображение", name: "image", widget: "image"}
-              - {label: "Заглавие (Alt Text)", name: "title", widget: "string", required: false}
-
-  # 6. COVERS (НОВО!)
-  - name: "covers"
-    label: "Covers (Корици)"
-    files:
-      - name: "covers"
-        label: "Галерия Covers"
-        file: "data/covers.json"
-        fields:
-          - label: "Списък изображения"
-            name: "images"
-            widget: "list"
-            fields:
-              - {label: "Изображение", name: "image", widget: "image"}
