@@ -1,6 +1,244 @@
 {
   "albums": [
     {
+      "id": "Сурва",
+      "cover": "/Photography/Uploads/dsc08087-enhanced-nr.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/dsc08093-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08101-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08106-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08149-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08186-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08187-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08202-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08213-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08217-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08223-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08278-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08298-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08304-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08338-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08344-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08400-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08413-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08424-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08431-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08435-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08438-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08439-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08446-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08456-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08478-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08491-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08515-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08553-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08558-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08584-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08599-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08608-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08617-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08630-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08643-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08675-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08680-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08684-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08707-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08723-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08748-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08753-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08758-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08763-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08776-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08801-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08819-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08835-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08844-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08852-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08869-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08878-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08889-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08893-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08905-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08910-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08925-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08929-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08930-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08934-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08942-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08944-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08949-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc08975-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc09049-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc09053-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc09056-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc09069-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc09070-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc09087-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc09098-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc09139-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc09147-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc09150-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc09168-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc09224-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc09226-enhanced-nr.jpg"
+        }
+      ],
+      "title": "Сурва 2026"
+    },
+    {
       "id": "kukeri",
       "title": "Кукерско Шествие",
       "date": "27.12.2025",
@@ -223,7 +461,7 @@
     },
     {
       "id": "djamala",
-      "title": "Джамала",
+      "title": "Джамала 2025",
       "cover": "/Photography/Horizontal/Джамала/1.jpg",
       "images": [
         "/Photography/Horizontal/Джамала/1.jpg",
