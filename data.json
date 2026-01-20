@@ -534,6 +534,49 @@
         "/Photography/Horizontal/Празник на плодородието/12.jpg",
         "/Photography/Horizontal/Празник на плодородието/13.jpg"
       ]
+    },
+    {
+      "id": "osogovo",
+      "title": "Глас на сърце, стъпка на душа",
+      "cover": "/Photography/Uploads/dsc04610-enhanced-nr.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/dsc02904-enhanced-nr-edit.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02961-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02980-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02984-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc03006-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc03012-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc03027-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc03066-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc03118-enhanced-nr-edit.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc03128-enhanced-nr-edit.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc03139-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc03156-enhanced-nr.jpg"
+        }
+      ]
     }
   ]
 }
