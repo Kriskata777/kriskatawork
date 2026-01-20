@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "Photography/Uploads"
+media_folder: "Photography/Uploads" # Тук се качват всички снимки
 public_folder: "/Photography/Uploads"
 
 slug:
@@ -11,19 +11,44 @@ slug:
   sanitize_replacement: "-"
 
 collections:
-  # 1. СТРАНИЦИ (Home Page)
+  # 1. НАЧАЛНА СТРАНИЦА (HOME)
   - name: "pages"
-    label: "Настройки на Начална страница"
+    label: "1. Начална Страница"
     files:
       - name: "home"
-        label: "Начална страница (Home)"
+        label: "Настройки на Home Page"
         file: "data/home.json"
         fields:
           - {label: "Заглавие (Hero)", name: "hero_title", widget: "string", default: "Най-разглеждани"}
+          - label: "Мнения от клиенти"
+            name: "reviews"
+            widget: "list"
+            fields:
+              - {label: "Име на клиента", name: "name", widget: "string"}
+              - {label: "Мнение (Текст)", name: "quote", widget: "text"}
+              - {label: "Снимка на клиента", name: "photo", widget: "image"}
+              - {label: "Линк (YouTube/Insta)", name: "social_link", widget: "string", required: false}
 
-  # 2. ФОТОГРАФИЯ (Албуми)
+  # 2. СТРАНИЦА КАТЕГОРИИ (WORK) - Тук управляваш плочките
+  - name: "work_page"
+    label: "2. Страница Категории (Work)"
+    files:
+      - name: "work"
+        label: "Настройки на Категориите"
+        file: "data/work.json"
+        fields:
+          - label: "Списък Категории"
+            name: "categories"
+            widget: "list"
+            fields:
+              - {label: "Заглавие", name: "title", widget: "string"}
+              - {label: "Снимка (Thumbnail)", name: "image", widget: "image"}
+              - {label: "Линк към страница (напр. photography.html)", name: "url", widget: "string"}
+
+  # 3. ФОТОГРАФИЯ (АЛБУМИ) - Това си работи супер
   - name: "albums"
-    label: "Фото Албуми"
+    label: "3. Фото Албуми"
+    folder: "content/albums" # Или запазваме стария метод с file: data.json, ако искаш
     files:
       - name: "albums"
         label: "Списък албуми"
@@ -35,7 +60,7 @@ collections:
             widget: "list"
             summary: "{{title}}"
             fields:
-              - {label: "ID (URL Name)", name: "id", widget: "string", hint: "напр. djamala (на латиница)"}
+              - {label: "ID (URL Name)", name: "id", widget: "string", hint: "напр. djamala"}
               - {label: "Заглавие", name: "title", widget: "string"}
               - {label: "Корица", name: "cover", widget: "image"}
               - label: "Галерия снимки"
@@ -43,3 +68,62 @@ collections:
                 widget: "list"
                 fields:
                   - {label: "Снимка", name: "image", widget: "image"}
+
+  # 4. ВИДЕА (ВСИЧКИ ВИДОВЕ)
+  - name: "videos"
+    label: "4. Видеа (YouTube)"
+    files:
+      - name: "shooted"
+        label: "Заснети Видеа"
+        file: "data/shooted_videos.json"
+        fields:
+          - label: "Списък Видеа"
+            name: "videos"
+            widget: "list"
+            fields:
+              - {label: "Заглавие", name: "title", widget: "string"}
+              - {label: "YouTube ID", name: "youtube_id", widget: "string", hint: "Само кода (напр. dQw4w9WgXcQ)"}
+      
+      - name: "edited"
+        label: "Обработени Видеа"
+        file: "data/edited_videos.json"
+        fields:
+          - label: "Списък Видеа"
+            name: "videos"
+            widget: "list"
+            fields:
+              - {label: "Заглавие", name: "title", widget: "string"}
+              - {label: "YouTube ID", name: "youtube_id", widget: "string"}
+
+      - name: "subtitles"
+        label: "Субтитри"
+        file: "data/subtitles.json"
+        fields:
+          - label: "Списък Видеа"
+            name: "videos"
+            widget: "list"
+            fields:
+              - {label: "Заглавие", name: "title", widget: "string"}
+              - {label: "YouTube ID", name: "youtube_id", widget: "string"}
+
+  # 5. ГАЛЕРИИ (THUMBNAILS & COVERS)
+  - name: "galleries"
+    label: "5. Галерии (Thumbnails/Covers)"
+    files:
+      - name: "thumbnails"
+        label: "Thumbnails"
+        file: "data/thumbnails.json"
+        fields:
+          - label: "Снимки"
+            name: "images"
+            widget: "list"
+            fields: [{label: "Image", name: "image", widget: "image"}]
+            
+      - name: "covers"
+        label: "Covers"
+        file: "data/covers.json"
+        fields:
+          - label: "Снимки"
+            name: "images"
+            widget: "list"
+            fields: [{label: "Image", name: "image", widget: "image"}]
