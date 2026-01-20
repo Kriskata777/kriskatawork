@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "Photography/Uploads" # Тук се качват всички снимки
+media_folder: "Photography/Uploads"
 public_folder: "/Photography/Uploads"
 
 slug:
@@ -29,7 +29,7 @@ collections:
               - {label: "Снимка на клиента", name: "photo", widget: "image"}
               - {label: "Линк (YouTube/Insta)", name: "social_link", widget: "string", required: false}
 
-  # 2. СТРАНИЦА КАТЕГОРИИ (WORK) - Тук управляваш плочките
+  # 2. СТРАНИЦА КАТЕГОРИИ (WORK)
   - name: "work_page"
     label: "2. Страница Категории (Work)"
     files:
@@ -43,12 +43,12 @@ collections:
             fields:
               - {label: "Заглавие", name: "title", widget: "string"}
               - {label: "Снимка (Thumbnail)", name: "image", widget: "image"}
-              - {label: "Линк към страница (напр. photography.html)", name: "url", widget: "string"}
+              - {label: "Линк към страница", name: "url", widget: "string", default: "photography.html"}
 
-  # 3. ФОТОГРАФИЯ (АЛБУМИ) - Това си работи супер
+  # 3. ФОТОГРАФИЯ (АЛБУМИ) - ПОПРАВЕНО!
   - name: "albums"
     label: "3. Фото Албуми"
-    folder: "content/albums" # Или запазваме стария метод с file: data.json, ако искаш
+    # ТУК БЕШЕ ГРЕШКАТА - махнахме реда "folder: ..."
     files:
       - name: "albums"
         label: "Списък албуми"
