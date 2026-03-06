@@ -46,9 +46,9 @@ collections:
               - {label: "Линк към страница", name: "url", widget: "string", default: "photography.html"}
 
   # 3. ФОТОГРАФИЯ (АЛБУМИ) - ПОПРАВЕНО!
+ # 3. ФОТОГРАФИЯ (АЛБУМИ)
   - name: "albums"
     label: "3. Фото Албуми"
-    # ТУК БЕШЕ ГРЕШКАТА - махнахме реда "folder: ..."
     files:
       - name: "albums"
         label: "Списък албуми"
@@ -60,14 +60,12 @@ collections:
             widget: "list"
             summary: "{{title}}"
             fields:
-              - {label: "ID (URL Name)", name: "id", widget: "string", hint: "напр. djamala"}
-              - {label: "Заглавие", name: "title", widget: "string"}
+              - {label: "ID (URL Name)", name: "id", widget: "string"}
+              - {label: "Заглавие (Основно)", name: "title", widget: "string"}
+              - {label: "Подзаглавие (напр. Перник)", name: "subtitle", widget: "string", required: false}
               - {label: "Корица", name: "cover", widget: "image"}
               - label: "Галерия снимки"
-                name: "photos"
-                widget: "list"
-                fields:
-                  - {label: "Снимка", name: "image", widget: "image"}
+                # ... надолу си продължава същото
 
   # 4. ВИДЕА (ВСИЧКИ ВИДОВЕ)
   - name: "videos"
@@ -127,3 +125,4 @@ collections:
             name: "images"
             widget: "list"
             fields: [{label: "Image", name: "image", widget: "image"}]
+
