@@ -1,6 +1,544 @@
 {
   "albums": [
     {
+      "id": "djamala26",
+      "title": "Джамала 2026",
+      "cover": "/Photography/Uploads/djamala26-87-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/djamala26-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-19-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-21-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-22-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-23-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-24-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-25-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-27-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-28-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-29-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-32-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-34-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-35-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-36-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-37-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-38-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-39-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-40-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-41-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-42-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-44-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-51-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-52-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-54-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-56-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-57-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-60-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-62-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-65-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-66-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-69-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-70-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-71-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-72-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-74-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-75-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-76-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-77-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-78-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-79-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-82-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-83-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-86-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-84-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-87-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-88-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-90-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-91-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-96-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-99-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-100-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-103-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-104-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-106-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-110-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-111-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-112-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-113-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-114-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-117-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-119-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-120-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-121-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-122-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-123-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-125-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-128-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-129-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-130-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-133-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-134-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-136-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-137-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-138-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-139-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-141-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-142-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-144-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-145-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-146-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-147-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-148-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-149-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-150-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-152-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-153-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-155-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-156-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-157-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-158-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-159-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-162-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-163-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-164-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-165-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-166-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-167-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-168-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-170-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-171-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-172-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-176-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-179-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-181-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-187-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-188-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-190-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-193-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-196-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-198-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-199-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-200-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-201-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-202-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-204-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-206-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-209-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-212-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-213-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-214-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-215-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-217-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-218-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-219-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-220-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-221-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-222-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-224-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-225-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-228-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-229-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-230-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-231-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-232-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-233-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-234-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-236-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-237-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-238-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-239-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-240-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-241-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-242-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-243-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-244-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-245-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-248-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-249-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-251-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-252-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-253-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-254-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-255-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-256-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-257-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-258-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-259-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-260-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-261-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-262-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-263-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-264-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-266-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-267-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-268-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-269-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-274-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/djamala26-275-.jpg"
+        }
+      ]
+    },
+    {
       "title": "Сурва Перник",
       "id": "surva-pernik",
       "cover": "/Photography/Uploads/dsc02257-enhanced-nr.jpg",
