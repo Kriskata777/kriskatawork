@@ -1564,19 +1564,14 @@ header > a:first-child img,
 
 @media (max-width: 768px) {
     h1, .album-title, #album-title {
-        white-space: normal !important;
-        width: 100% !important; /* Взима цялата свободна ширина, без да прелива */
-        max-width: 100% !important;
-        margin: 0 !important; /* Махаме всякакви избутвания отляво/отдясно */
-        padding: 0 15px !important; /* Слагаме равно разстояние от двата края на екрана */
-        text-align: center !important; 
-        font-size: 1.6rem !important; 
-        line-height: 1.3 !important;
-        box-sizing: border-box !important; /* Гарантира, че padding-ът няма да избута текста */
-        display: block !important; 
+        white-space: normal !important; /* Позволява текста да слиза на долния ред */
+        width: 95vw !important; /* Разпъва невидимата кутия от край до край на екрана */
+        margin: 0 auto !important; /* Центрира кутията */
+        text-align: center !important; /* Центрира самия текст */
+        font-size: 1.6rem !important; /* Прави шрифта идея по-малък за телефони */
+        line-height: 1.3 !important; /* Дава въздух между редовете */
     }
 }
-
 
 
 
