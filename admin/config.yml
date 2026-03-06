@@ -46,7 +46,7 @@ collections:
               - {label: "Линк към страница", name: "url", widget: "string", default: "photography.html"}
 
   # 3. ФОТОГРАФИЯ (АЛБУМИ) - ПОПРАВЕНО!
-- name: "albums"
+  - name: "albums"
     label: "3. Фото Албуми"
     # ТУК БЕШЕ ГРЕШКАТА - махнахме реда "folder: ..."
     files:
@@ -127,6 +127,7 @@ collections:
             name: "images"
             widget: "list"
             fields: [{label: "Image", name: "image", widget: "image"}]
+
 
 
 
