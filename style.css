@@ -1564,14 +1564,15 @@ header > a:first-child img,
 
 
 @media (max-width: 768px) {
-    /* Пипаме само поведението на буквите, без да бутаме контейнерите */
     h1, .album-title, #album-title {
-        white-space: pre-wrap !important; /* Позволява естествено пренасяне на думите */
-        overflow-wrap: break-word !important; /* Пренася дългите думи/тирета, ако няма място */
-        text-align: center !important; /* Държи го центрирано */
-        font-size: 1.5rem !important; /* Леко намалява шрифта, за да се събере красиво */
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        word-break: break-word;
+        text-align: center !important;
+        font-size: 1.5rem !important;
     }
 }
+
 
 
 
