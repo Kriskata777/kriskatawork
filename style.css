@@ -1564,12 +1564,13 @@ header > a:first-child img,
 
 @media (max-width: 768px) {
     h1, .album-title, #album-title {
-        white-space: normal !important; /* Позволява текста да слиза на долния ред */
-        width: 95vw !important; /* Разпъва невидимата кутия от край до край на екрана */
-        margin: 0 auto !important; /* Центрира кутията */
+        white-space: normal !important; /* Това сваля "- Перник" на долния ред */
+        word-wrap: break-word !important;
         text-align: center !important; /* Центрира самия текст */
-        font-size: 1.6rem !important; /* Прави шрифта идея по-малък за телефони */
-        line-height: 1.3 !important; /* Дава въздух между редовете */
+        max-width: 90vw !important; /* Дава му достатъчно място да диша, без да прелива */
+        width: auto !important;
+        margin-left: auto !important; /* Тези двете го центрират безопасно */
+        margin-right: auto !important;
     }
 }
 
