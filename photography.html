@@ -62,21 +62,12 @@
                         link.className = 'album-card';
                         
                         let cleanCover = album.cover ? album.cover.replace('public/', '') : 'logo.png';
-                        
-                        // Логика за подзаглавието: ако го има, го показваме, ако не - оставяме празно
-                        let subtitleHTML = '';
-                        if (album.subtitle) {
-                            subtitleHTML = `<h3 class="album-subtitle">${album.subtitle}</h3>`;
-                        }
 
                         link.innerHTML = `
                             <div class="album-image-wrapper">
                                 <img src="${cleanCover}" alt="${album.title}" loading="lazy">
                                 <div class="album-overlay">
-                                    <div class="text-container">
-                                        <h2>${album.title}</h2>
-                                        ${subtitleHTML}
-                                    </div>
+                                    <h2>${album.title}</h2>
                                 </div>
                             </div>
                         `;
@@ -90,7 +81,7 @@
     <style>
         body { background-color: #222; margin: 0; padding: 0; font-family: sans-serif; }
 
-        /* --- СТРУКТУРА --- */
+        /* --- СТРУКТУРА (Оправя размера на Кукерите) --- */
         .album-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -109,7 +100,7 @@
             position: relative;
             overflow: hidden;
             border-radius: 8px;
-            aspect-ratio: 16 / 9;
+            aspect-ratio: 16 / 9; /* Всички стават еднакви */
             background: #333;
             transition: transform 0.3s ease;
         }
@@ -119,56 +110,34 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            transition: transform 0.5s ease;
         }
 
-        /* --- ДИЗАЙН --- */
+        /* --- ДИЗАЙН (Върнат както го искаш: Центриран + Тъмен) --- */
         .album-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); 
+            background-color: rgba(0, 0, 0, 0.5); /* Върнахме тъмния филтър върху цялата снимка */
             display: flex;
-            justify-content: center;
-            align-items: center;  
+            justify-content: center; /* Центрира хоризонтално */
+            align-items: center;     /* Центрира вертикално */
             transition: background-color 0.3s ease;
-        }
-
-        /* Контейнер за заглавието и подзаглавието, за да стоят едно под друго */
-        .text-container {
-            text-align: center;
-            padding: 15px;
-            width: 100%;
         }
 
         .album-overlay h2 {
             color: white;
             font-size: 1.8rem;
+            text-align: center;
+            padding: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
             margin: 0;
-            /* Това помага за дълги заглавия на телефон */
-            white-space: pre-wrap;
-            word-wrap: break-word;
         }
 
-       /* Стилове за новото подзаглавие */
-        .album-subtitle {
-            color: #ddd; /* По-светло сиво, почти бяло, за по-добър контраст */
-            font-size: 1.1rem; /* Малко по-малък размер, за да не се бие с главното заглавие */
-            font-weight: 300; /* Тънък шрифт за елегантност */
-            font-style: italic; /* Добавяме лек наклон (курсив), за да се различава визуално */
-            margin: 15px 0 0 0; /* Увеличихме горното разстояние (margin-top) от 5px на 15px, за да слезе надолу */
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-            letter-spacing: 1px; /* Леко разредихме буквите за по-въздушен вид */
-        }
-
-        /* Лека корекция за телефони, за да не стане твърде ситно */
-        @media (max-width: 600px) {
-            .album-grid { grid-template-columns: 1fr; }
-            .album-overlay h2 { font-size: 1.5rem; }
-            .album-subtitle { font-size: 1rem; margin-top: 10px; } /* Малко по-малко разстояние на телефон */
+        /* Ефект при минаване с мишката */
+        .album-card:hover .album-overlay {
+            background-color: rgba(0, 0, 0, 0.3); /* Леко просветляване */
         }
 
         .album-card:hover img {
@@ -177,10 +146,7 @@
         
         @media (max-width: 600px) {
             .album-grid { grid-template-columns: 1fr; }
-            .album-overlay h2 { font-size: 1.5rem; } /* Леко намаляване за телефони */
-            .album-subtitle { font-size: 1.1rem; }
         }
     </style>
 </body>
 </html>
-
