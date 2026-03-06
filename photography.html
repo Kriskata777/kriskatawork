@@ -153,18 +153,22 @@
             word-wrap: break-word;
         }
 
-        /* Стилове за новото подзаглавие */
+       /* Стилове за новото подзаглавие */
         .album-subtitle {
-            color: #ccc; /* Леко сиво, за да не се бърка с главното заглавие */
-            font-size: 1.2rem;
-            font-weight: 300;
-            margin: 5px 0 0 0; /* Малко разстояние от главното заглавие */
+            color: #ddd; /* По-светло сиво, почти бяло, за по-добър контраст */
+            font-size: 1.1rem; /* Малко по-малък размер, за да не се бие с главното заглавие */
+            font-weight: 300; /* Тънък шрифт за елегантност */
+            font-style: italic; /* Добавяме лек наклон (курсив), за да се различава визуално */
+            margin: 15px 0 0 0; /* Увеличихме горното разстояние (margin-top) от 5px на 15px, за да слезе надолу */
             text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+            letter-spacing: 1px; /* Леко разредихме буквите за по-въздушен вид */
         }
 
-        /* Ефект при минаване с мишката */
-        .album-card:hover .album-overlay {
-            background-color: rgba(0, 0, 0, 0.3);
+        /* Лека корекция за телефони, за да не стане твърде ситно */
+        @media (max-width: 600px) {
+            .album-grid { grid-template-columns: 1fr; }
+            .album-overlay h2 { font-size: 1.5rem; }
+            .album-subtitle { font-size: 1rem; margin-top: 10px; } /* Малко по-малко разстояние на телефон */
         }
 
         .album-card:hover img {
@@ -179,3 +183,4 @@
     </style>
 </body>
 </html>
+
