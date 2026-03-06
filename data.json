@@ -1,6 +1,247 @@
 {
   "albums": [
     {
+      "title": "Сурва Перник",
+      "id": "surva-pernik",
+      "cover": "/Photography/Uploads/dsc02257-enhanced-nr.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/dsc02066-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02082-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02099-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02109-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02119-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02122-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02140-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02157-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02172-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02178-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02182-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02188-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02194-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02197-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02198-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02200-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02218-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02219-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02221-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02222-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02225-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02233-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02256-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02257-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02267-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02269-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02273-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02278-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02281-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02283-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02296-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02308-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02319-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02335-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02347-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02367-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02399-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02405-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02432-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02439-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02443-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02455-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02483-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02491-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02527-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02533-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02538-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02540-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02564-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02566-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02568-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02582-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02584-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02591-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02596-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02602-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02602-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-17-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-18-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-19-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-20-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-21-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/surva-pernik-23-.jpg"
+        }
+      ]
+    },
+    {
       "id": "Сурва",
       "cover": "/Photography/Uploads/dsc08087-enhanced-nr.jpg",
       "photos": [
