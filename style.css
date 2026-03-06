@@ -1562,17 +1562,7 @@ header > a:first-child img,
 }
 
 
-@media (max-width: 768px) {
-    h1, .album-title, #album-title {
-        white-space: normal !important; /* Това сваля "- Перник" на долния ред */
-        word-wrap: break-word !important;
-        text-align: center !important; /* Центрира самия текст */
-        max-width: 90vw !important; /* Дава му достатъчно място да диша, без да прелива */
-        width: auto !important;
-        margin-left: auto !important; /* Тези двете го центрират безопасно */
-        margin-right: auto !important;
-    }
-}
+
 
 
 
