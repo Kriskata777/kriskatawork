@@ -62,7 +62,6 @@ collections:
             fields:
               - {label: "ID (URL Name)", name: "id", widget: "string", hint: "напр. djamala"}
               - {label: "Заглавие (Основно)", name: "title", widget: "string"}
-              - {label: "Подзаглавие (напр. Перник)", name: "subtitle", widget: "string", required: false}
               - {label: "Корица", name: "cover", widget: "image"}
               - label: "Галерия снимки"
                 name: "photos"
@@ -128,6 +127,7 @@ collections:
             name: "images"
             widget: "list"
             fields: [{label: "Image", name: "image", widget: "image"}]
+
 
 
 
