@@ -1,6 +1,262 @@
 {
   "albums": [
     {
+      "title": "Когато звездите шепнат мечти",
+      "id": "zvezdite",
+      "cover": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-166-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-36-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-42-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-47-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-49-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-50-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-53-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-54-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-56-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-58-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-60-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-63-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-65-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-67-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-73-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-80-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-83-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-85-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-87-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-88-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-91-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-93-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-94-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-97-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-98-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-101-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-104-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-106-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-107-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-108-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-109-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-114-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-115-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-111-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-116-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-117-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-118-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-123-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-125-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-127-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-129-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-130-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-134-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-138-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-142-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-144-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-146-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-149-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-153-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-155-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-157-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-158-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-160-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-166-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-167-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-168-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-171-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-173-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-177-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-178-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-180-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-183-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-186-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-187-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-190-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-194-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-195-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-198-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-199-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-200-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-203-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-204-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-205-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-206-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-208-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-212-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-213-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-215-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-217-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-218-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-220-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-223-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-224-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-226-.jpg"
+        }
+      ]
+    },
+    {
       "id": "djamala26",
       "title": "Джамала 2026",
       "cover": "/Photography/Uploads/djamala26-87-.jpg",
