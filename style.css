@@ -1558,4 +1558,26 @@ header > a:first-child img,
 /* Hover Effect: Turn button red */
 .video-container:hover .play-button {
     background-color: #f00;
+
+}
+
+
+/* Правило дългите заглавия да се пренасят на нов ред, вместо да режат екрана */
+h1, h2, h3 {
+    white-space: normal !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 1.3;
+}
+
+/* Смаляваме малко шрифта на заглавията, когато сайтът се отваря от телефон */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem !important; 
+    }
+    h2 {
+        font-size: 1.3rem !important;
+    }
 }
