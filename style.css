@@ -1575,13 +1575,5 @@ h1, h2, .album-title, #album-title {
     box-sizing: border-box !important;
 }
 
-/* Смаляваме малко шрифта на заглавията, когато сайтът се отваря от телефон */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1.5rem !important; 
-    }
-    h2 {
-        font-size: 1.3rem !important;
-    }
-}
+
 
