@@ -1,6 +1,73 @@
 {
   "albums": [
     {
+      "id": "petrich",
+      "title": "Международния детски конкурс „Южни слънца“",
+      "cover": "/Photography/Uploads/5-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/17-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/18-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/19-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/21-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/22-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/23-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/7-.jpg"
+        }
+      ]
+    },
+    {
       "id": "prolet-2026",
       "title": "Кюстендилска Пролет 2026",
       "cover": "/Photography/Uploads/dsc02933-enhanced-nr.jpg",
@@ -2278,73 +2345,6 @@
         "/Photography/Horizontal/Празник на плодородието/11.jpg",
         "/Photography/Horizontal/Празник на плодородието/12.jpg",
         "/Photography/Horizontal/Празник на плодородието/13.jpg"
-      ]
-    },
-    {
-      "id": "petrich",
-      "title": "Южни слънца",
-      "cover": "/Photography/Uploads/5-.jpg",
-      "photos": [
-        {
-          "image": "/Photography/Uploads/8-.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/9-.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/10-.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/11-.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/12-.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/13-.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/14-.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/16-.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/17-.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/18-.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/19-.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/21-.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/22-.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/23-.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/1-.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/2-.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/3-.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/4-.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/6-.jpg"
-        },
-        {
-          "image": "/Photography/Uploads/7-.jpg"
-        }
       ]
     }
   ]
