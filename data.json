@@ -1,6 +1,187 @@
 {
   "albums": [
     {
+      "id": "prolet-2026",
+      "title": "Кюстендилска Пролет 2026",
+      "cover": "/Photography/Uploads/dsc02933-enhanced-nr.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/dsc00670-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc00712-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc00785-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc00822-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc00824-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc00832-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc00918-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc00943-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc00952-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc00977-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc00982-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01020-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01176-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01208-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01232-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01274-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01307-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01496-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01512-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01524-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01540-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01559-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01581-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01589-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01603-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01628-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01640-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01650-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01665-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01672-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01690-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01800-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01812-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01820-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01835-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01854-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01867-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01883-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01900-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc01951-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02019-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02023-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02059-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02075-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02111-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02130-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02145-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02185-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02214-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02229-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02262-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02287-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02293-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02412-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02654-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02671-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02933-enhanced-nr.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/dsc02974-enhanced-nr.jpg"
+        }
+      ]
+    },
+    {
       "title": "Когато звездите шепнат мечти",
       "id": "zvezdite",
       "cover": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-166-.jpg",
