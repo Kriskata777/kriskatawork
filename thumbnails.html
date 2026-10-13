@@ -1,167 +1,477 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thumbnails</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your external CSS file -->
-    <link rel="icon" href="logo.png" sizes="32x32" type="image/png"> <!-- Favicon -->
+    <title>Kriskata | Тъмбнейли</title>
+    <link rel="icon" href="logo.png" sizes="32x32" type="image/png">
+    
+    <!-- Добавяне на шрифт Sofia Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #121212;
+            --surface-color: #1e1e1e;
+            --primary-color: #00d2ff;
+            --text-main: #f5f5f5;
+            --text-muted: #a0a0a0;
+            --transition: 0.3s ease-in-out;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Sofia Sans', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 50% 30%, rgba(0, 210, 255, 0.03) 0%, transparent 60%);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        header.main-header {
+            background-color: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 2005; 
+            border-bottom: 1px solid #333;
+            padding: 5px 5%;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            grid-column: 2 / 3;
+        }
+
+        .logo-container img {
+            height: 95px; 
+            width: auto;
+            border-radius: 8px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            grid-column: 3 / 4;
+        }
+
+        .desktop-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .desktop-menu a {
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color var(--transition);
+        }
+
+        .desktop-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 2010; 
+        }
+
+        .hamburger .line {
+            width: 30px;
+            height: 3px;
+            background-color: var(--text-main);
+            transition: all 0.3s ease-in-out;
+            transform-origin: center left;
+        }
+
+        .hamburger.open .line:nth-child(1) { transform: rotate(45deg) translate(2px, -2px); }
+        .hamburger.open .line:nth-child(2) { opacity: 0; }
+        .hamburger.open .line:nth-child(3) { transform: rotate(-45deg) translate(2px, 2px); }
+
+        .dropdown-content {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #0066ff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .dropdown-content.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .dropdown-content ul { text-align: center; padding: 0; }
+        .dropdown-content li { margin-bottom: 40px; }
+        .dropdown-content a { font-size: 2.5rem; font-weight: bold; color: #ffffff; }
+
+        .projects-section {
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        /* Обща мрежа за Тъмбнейлите и Експериментите */
+        .project-list-thumbnails, .experiment-list {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 на ред */
+            gap: 25px;
+        }
+
+        .thumbnail-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background-color: var(--surface-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+
+        .thumbnail-container:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 210, 255, 0.2);
+        }
+
+        .thumbnail-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .experiment-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            cursor: pointer;
+            background-color: #000;
+        }
+
+        .experiment-thumbnail {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .before-image, .after-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        /* "След" снимката е скрита по подразбиране */
+        .after-image {
+            opacity: 0;
+        }
+
+        /* Етикети Преди/След */
+        .badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            z-index: 10;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .badge-before {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.2);
+            opacity: 1;
+        }
+
+        .badge-after {
+            background-color: var(--primary-color);
+            color: #000;
+            opacity: 0;
+        }
+
+        /* Hover Ефекти за Експериментите */
+        .experiment-container:hover .before-image {
+            opacity: 0; /* Скрива оригиналната */
+        }
+        
+        .experiment-container:hover .after-image {
+            opacity: 1; /* Показва обработената */
+            transform: scale(1.05); /* Леко приближаване за УАУ ефект */
+        }
+
+        .experiment-container:hover .badge-before {
+            opacity: 0;
+        }
+
+        .experiment-container:hover .badge-after {
+            opacity: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #0a0a0a;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #222;
+            margin-top: 40px;
+        }
+
+        /* Респонсив */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .project-list-thumbnails, .experiment-list {
+                grid-template-columns: repeat(2, 1fr); /* 2 на ред за таблети */
+            }
+        }
+
+        @media (max-width: 768px) {
+            header.main-header {
+                grid-template-columns: 1fr auto 1fr;
+            }
+            .desktop-menu { display: none; }
+            .hamburger { display: flex; justify-self: end; }
+            .section-title { font-size: 2rem; }
+            .project-list-thumbnails, .experiment-list {
+                grid-template-columns: 1fr; /* 1 на ред на телефон */
+                gap: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
-<header>
-    <div class="logo-container">
-        <a href="home.html">
-            <img src="logo.png" alt="My Logo" class="logo">
-        </a>
-    </div>
 
-    <nav>
-        <ul class="desktop-menu">
-            <li><a href="work.html">Категории</a></li>
-            <li><a href="contact.html">Контакти</a></li>
-        </ul>
-
-        <div class="hamburger" onclick="toggleMenu()">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+    <header class="main-header">
+        <div></div> 
+        
+        <div class="logo-container">
+            <a href="home.html">
+                <img src="logo.png" alt="Kriskata Logo" class="logo">
+            </a>
         </div>
-    </nav>
-</header>
 
+        <nav>
+            <ul class="desktop-menu">
+                <li><a href="work.html">Категории</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+            </ul>
 
-        <ul class="dropdown-content">
-            <li><a href="work.html" class="menu-link">Категории</a></li>
-            <li><a href="contact.html" class="menu-link">Контакти</a></li>
-        </ul>
-
-    <script src="menu.js"></script>
-</body>
+            <div class="hamburger" id="hamburger-icon" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
     </header>
 
-    <section class="projects">
-        <h1>Тъмбнейли</h1>
-                <div class="project-list-thumbnails">
-                        <div class="thumbnail-container">
-            <img src="/Thumbnails/Жоро и Гената - тъмбнейл.png" alt="Thumbnail 1" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-                        <div class="thumbnail-container">
-            <img src="/Thumbnails/Cafe_racer_-_.jpg" alt="Thumbnail 1" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-                        <div class="thumbnail-container">
-            <img src="/Thumbnails/Кадин_мост.jpg" alt="Thumbnail 1" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
+    <!-- Мобилно меню -->
+    <div class="dropdown-content" id="mobileMenu">
+        <ul>
+            <li><a href="work.html" onclick="toggleMenu()">Категории</a></li>
+            <li><a href="contact.html" onclick="toggleMenu()">Контакти</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="projects-section">
+            <h1 class="section-title">Тъмбнейли</h1>
+            
             <div class="project-list-thumbnails">
-                        <div class="thumbnail-container">
-                <img src="/Thumbnails/Work in light thumbnail.jpg" alt="Thumbnail 1" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Barcelona vlog - .png" alt="Thumbnail 1" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Подкаст с Ицака -.png" alt="Thumbnail 1" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Подкаст с Дани и Цвети 2.png" alt="Thumbnail 2" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Наргиле самолет.png" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/darkside в облако.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Щипки.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Geometry dragon - final.png" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Kaya ревю 2 - new.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Кая ревю тъмбнейл - new.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/да го мия ли - тъмбнейл.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Кзак да си направим наргиле с повече дим - thumbnail - new - final.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Преглътни или отгатни.png" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Overdozz thumbnail - new.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Кетчъри - thumbnail - new - final.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Ревю на котлон1-1.png" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Doosha Guardian ревю 1-4.png" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Totem review - new thumb.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Dubai vlog.png" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Пица предизвикателство - thumbnail.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-        </div>
-    </section>
-
-    <section class="experiments">
-        <h1>Experiments</h1>
-        <h3>Видеата са пуснати с тъмбнейлите, които виждате първоначално, аз просто реших да експериментирам и да се пробвам да ги направя по-добре</h3>
-        <div class="experiment-list">
-            <div class="experiment-container">
-                <div class="experiment-thumbnail">
-                    <img src="/Experiments/yPlWiAoQXKw-HD.jpg" alt="Before" class="before-image">
-                    <img src="/Experiments/Дух или не - еп 6.png" alt="After" class="after-image">
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Жоро и Гената - тъмбнейл.jpg" alt="Thumbnail 1" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Cafe_racer_-_.jpg" alt="Thumbnail 2" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Кадин_мост.jpg" alt="Thumbnail 3" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Work in light thumbnail.jpg" alt="Thumbnail 4" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Barcelona vlog - .jpg" alt="Thumbnail 5" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Подкаст с Ицака -.jpg" alt="Thumbnail 6" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Подкаст с Дани и Цвети 2.jpg" alt="Thumbnail 7" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Наргиле самолет.jpg" alt="Thumbnail 8" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/darkside в облако.jpg" alt="Thumbnail 9" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Щипки.jpg" alt="Thumbnail 10" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Geometry dragon - final.jpg" alt="Thumbnail 11" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Kaya ревю 2 - new.jpg" alt="Thumbnail 12" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Кая ревю тъмбнейл - new.jpg" alt="Thumbnail 13" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/да го мия ли - тъмбнейл.jpg" alt="Thumbnail 14" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Кзак да си направим наргиле с повече дим - thumbnail - new - final.jpg" alt="Thumbnail 15" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Преглътни или отгатни.jpg" alt="Thumbnail 16" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Overdozz thumbnail - new.jpg" alt="Thumbnail 17" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Кетчъри - thumbnail - new - final.jpg" alt="Thumbnail 18" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Ревю на котлон1-1.jpg" alt="Thumbnail 19" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Doosha Guardian ревю 1-4.jpg" alt="Thumbnail 20" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Totem review - new thumb.jpg" alt="Thumbnail 21" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Dubai vlog.jpg" alt="Thumbnail 22" class="thumbnail-image" loading="lazy"> 
+                </div>
+                <div class="thumbnail-container">
+                    <img src="/Thumbnails/Пица предизвикателство - thumbnail.jpg" alt="Thumbnail 23" class="thumbnail-image" loading="lazy"> 
                 </div>
             </div>
-            <div class="experiment-container">
-                <div class="experiment-thumbnail">
-                    <img src="/Experiments/r7Tq594_7KQ-HD.jpg" alt="Before" class="before-image">
-                    <img src="/Experiments/Nikon Z30 - Thumbnail.png" alt="After" class="after-image">
-                </div>
-            </div>
-            <div class="experiment-container">
-                <div class="experiment-thumbnail">
-                    <img src="/Experiments/hi19MD9tWI4-HD.jpg" alt="Before" class="before-image">
-                    <img src="/Experiments/Teya Malta thumbnail.jpg" alt="After" class="after-image">
-                </div>
-            </div>
-            <!-- Add more experiment thumbnails as needed -->
-        </div>
-    </section>
+        </section>
 
+        <section class="projects-section" style="background-color: rgba(255,255,255,0.02); margin-top: 40px; padding-bottom: 80px;">
+            <h1 class="section-title">Експерименти</h1>
+            <p class="section-subtitle">Видеата са пуснати с тъмбнейлите, които виждате първоначално (Преди). Аз просто реших да експериментирам и да се пробвам да ги направя по-добре (След).</p>
+            
+            <div class="experiment-list">
+                
+                <div class="experiment-container">
+                    <div class="experiment-thumbnail">
+                        <span class="badge badge-before">Преди</span>
+                        <span class="badge badge-after">След</span>
+                        <img src="/Experiments/yPlWiAoQXKw-HD.jpg" alt="Before" class="before-image" loading="lazy">
+                        <img src="/Experiments/Дух или не - еп 6.png" alt="After" class="after-image" loading="lazy">
+                    </div>
+                </div>
 
+                <div class="experiment-container">
+                    <div class="experiment-thumbnail">
+                        <span class="badge badge-before">Преди</span>
+                        <span class="badge badge-after">След</span>
+                        <img src="/Experiments/r7Tq594_7KQ-HD.jpg" alt="Before" class="before-image" loading="lazy">
+                        <img src="/Experiments/Nikon Z30 - Thumbnail.png" alt="After" class="after-image" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="experiment-container">
+                    <div class="experiment-thumbnail">
+                        <span class="badge badge-before">Преди</span>
+                        <span class="badge badge-after">След</span>
+                        <img src="/Experiments/hi19MD9tWI4-HD.jpg" alt="Before" class="before-image" loading="lazy">
+                        <img src="/Experiments/Teya Malta thumbnail.jpg" alt="After" class="after-image" loading="lazy">
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 Kriskata. Всички права запазени.
+    </footer>
 
     <script>
-        function toggleDropdown() {
-            const dropdownContent = document.querySelector('.dropdown-content');
-            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        // Функция за мобилното меню
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const hamburger = document.getElementById('hamburger-icon');
+            
+            menu.classList.toggle('show');
+            hamburger.classList.toggle('open');
         }
     </script>
-
-<style>
-    body {
-        background-color: #222; /* dark gray */
-        margin: 0;
-        padding: 0;
-    }
-</style>
-
-<footer>
-    © Kriskata
-</footer>
-
 </body>
 </html>

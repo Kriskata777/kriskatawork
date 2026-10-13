@@ -1,141 +1,592 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kriskata</title>
-        <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
-        <link rel="icon" href="logo.png" type="image/png">
-    </head>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Оптимизации -->
+    <meta name="description" content="Kriskata - Професионална видеообработка, заснемане и изработка на тъмбнейли.">
+    <title>Kriskata Work</title>
     
+    <link rel="icon" href="logo.png" type="image/png">
+    
+    <!-- Добавяне на шрифт Sofia Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Вградени стилове за превюто (В реалния проект ги премести в style.css) -->
+    <style>
+        /* --- Основни настройки и променливи --- */
+        :root {
+            --bg-color: #121212;
+            --surface-color: #1e1e1e;
+            --primary-color: #00d2ff;
+            --text-main: #f5f5f5;
+            --text-muted: #a0a0a0;
+            --transition: 0.3s ease-in-out;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            /* Прилагане на новия шрифт */
+            font-family: 'Sofia Sans', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* --- Хедър и Навигация --- */
+        header.main-header {
+            background-color: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 2001; /* Увеличено, за да стои НАД отвореното мобилно меню */
+            border-bottom: 1px solid #333;
+            /* Намаляваме padding-а, за да не се раздува прекалено хедъра */
+            padding: 5px 5%;
+            
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+        }
+
+        /* Центриране на логото в средната колона на грида */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            grid-column: 2 / 3;
+        }
+
+        .logo-container img {
+            /* Уголемяваме логото значително */
+            height: 95px; 
+            width: auto;
+            border-radius: 8px;
+        }
+
+        /* Позициониране на навигацията */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end; /* Избутва менюто вдясно */
+            grid-column: 3 / 4;
+        }
+
+        .desktop-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .desktop-menu a {
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color var(--transition);
+        }
+
+        .desktop-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Мобилно меню (Хамбургер) --- */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 2002; /* Гарантира, че винаги може да се кликне */
+        }
+
+        .hamburger .line {
+            width: 30px;
+            height: 3px;
+            background-color: var(--text-main);
+            transition: all 0.3s ease-in-out;
+            transform-origin: center left; /* Точка на завъртане за анимацията */
+        }
+
+        /* Анимация: Хамбургерът става на Х при добавен клас open */
+        .hamburger.open .line:nth-child(1) {
+            transform: rotate(45deg) translate(2px, -2px);
+        }
+        .hamburger.open .line:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.open .line:nth-child(3) {
+            transform: rotate(-45deg) translate(2px, 2px);
+        }
+
+        /* --- Цялоекранно мобилно меню --- */
+        .dropdown-content {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #0066ff; /* Синьото от твоята снимка */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .dropdown-content.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .dropdown-content ul {
+            text-align: center;
+            padding: 0;
+        }
+
+        .dropdown-content li {
+            margin-bottom: 40px;
+        }
+
+        .dropdown-content a {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        /* Премахваме стария .close-btn, защото хамбургерът става на Х */
+
+        /* --- Hero Секция (Динамичен слайдър с текст и бутони) --- */
+        .hero {
+            position: relative;
+            padding: 0; /* Премахваме padding-а, за да заеме целия екран */
+            text-align: center;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 500px;
+            height: 70vh; /* Малко по-голяма височина */
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s ease-in-out, visibility 1s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            visibility: visible;
+            z-index: 10;
+        }
+
+        /* Заменяме .slide-bg с реални <img> тагове */
+        .slide-bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Прави снимката да запълва екрана без да се сплесква */
+            object-position: center;
+            z-index: -2;
+        }
+
+        /* Тъмен полупрозрачен слой (overlay), за да се чете текста винаги */
+        .slide-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(18, 18, 18, 0.27); /* 65% тъмнина */
+            z-index: -1;
+        }
+
+        /* Контейнер за текста пред снимките с анимация (приплъзване нагоре) */
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            transform: translateY(30px);
+            opacity: 0;
+            transition: transform 1.7s ease-out 0.3s, opacity 0.8s ease-out 0.3s;
+        }
+
+        .hero-slide.active .hero-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem; /* Увеличен шрифт заради Sofia Sans */
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #ffffff; /* По-бял текст за контраст */
+            margin: 0 auto 30px auto;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #000;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
+        }
+
+        /* --- Категории --- */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin: 60px 0 30px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .categories1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .category-list1 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .category-list1 li a {
+            display: block;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: var(--surface-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+
+        .category-list1 li a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 210, 255, 0.2);
+        }
+
+        .category-image1 {
+            width: 100%;
+            height: auto; /* Позволява на снимката да запази пропорциите си без да се реже */
+            display: block;
+            background-color: transparent; 
+        }
+
+        /* --- Мнения от клиенти (Testimonials) --- */
+        .testimonials {
+            padding: 60px 20px;
+            background-color: var(--surface-color);
+            margin-top: 60px;
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            min-height: 280px; /* Предотвратява подскачането на страницата */
+            display: grid; /* Използваме grid за припокриване на елементите */
+        }
+
+        .testimonial {
+            grid-area: 1 / 1; /* Всички мнения са на едно и също място */
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease, visibility 0.8s;
+            text-align: center;
+            background: #2a2a2a;
+            padding: 40px 30px;
+            border-radius: 20px;
+            border: 1px solid #333;
+        }
+
+        /* Класът, който показва активното мнение */
+        .testimonial.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            z-index: 2;
+        }
+
+        .profile-picture {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            margin-bottom: 20px;
+            background-color: #444; /* Fallback */
+        }
+
+        .testimonial p {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #ddd;
+            margin-bottom: 15px;
+        }
+
+        .testimonial span {
+            font-weight: bold;
+            color: var(--primary-color);
+            display: block;
+        }
+
+        /* --- Футър --- */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #0a0a0a;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* --- Медиа заявки (Респонсив дизайн) --- */
+        @media (max-width: 768px) {
+            header.main-header {
+                /* На мобилни устройства запазваме логото в центъра, а хамбургерът е вдясно */
+                grid-template-columns: 1fr auto 1fr;
+            }
+            .desktop-menu { display: none; }
+            .hamburger { 
+                display: flex; 
+                margin-left: auto; /* Избутва хамбургера максимално вдясно */
+            }
+            .hero h1 { font-size: 2.2rem; }
+            .testimonial-slider { min-height: 350px; }
+        }
+    </style>
+</head>
 <body>
-    
-<header>
-    <div class="logo-container">
-        <a href="home.html">
-            <img src="logo.png" alt="My Logo" class="logo">
-        </a>
-    </div>
 
-    <nav>
-        <ul class="desktop-menu">
-            <li><a href="work.html">Категории</a></li>
-            <li><a href="contact.html">Контакти</a></li>
-        </ul>
+    <!-- Header (Коригиран и обединен) -->
+    <header class="main-header">
+        <!-- Празен div за запазване на симетрията в лявата колона на грида -->
+        <div></div>
 
-        <div class="hamburger" onclick="toggleMenu()">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+        <div class="logo-container">
+            <a href="home.html">
+                <img src="logo.png" alt="Kriskata Logo" class="logo">
+            </a>
         </div>
-    </nav>
-</header>
 
+        <nav>
+            <ul class="desktop-menu">
+                <li><a href="work.html">Категории</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+            </ul>
 
-        <ul class="dropdown-content">
-            <li><a href="work.html" class="menu-link">Категории</a></li>
-            <li><a href="contact.html" class="menu-link">Контакти</a></li>
-        </ul>
-
-    <script src="menu.js"></script>
-</body>
+            <!-- Добавено id на хамбургера за JS -->
+            <div class="hamburger" id="hamburger-icon" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
     </header>
 
-    <body>
-        <!-- Header -->
-        <header class="hero">
-            <h2 style="text-align: center; white-space: nowrap; margin-top: 40px;">
-    Най-разглеждани
-</h2>
+    <!-- Мобилно меню на цял екран -->
+    <div class="dropdown-content" id="mobileMenu">
+        <!-- Бутонът X е премахнат, хамбургерът от хедъра над него ще върши тази работа -->
+        <ul>
+            <li><a href="work.html" class="menu-link" onclick="toggleMenu()">Категории</a></li>
+            <li><a href="contact.html" class="menu-link" onclick="toggleMenu()">Контакти</a></li>
+        </ul>
+    </div>
 
-        </header>
-    
+    <main>
+        <!-- Нова Hero Секция с Динамичен Слайдър -->
+        <section class="hero">
+            
+            <!-- Слайд 1: Фотография -->
+            <div class="hero-slide active">
+                <!-- Тук слагаш пътя към твоята снимка, напр. src="images/photo-bg.jpg" -->
+                <img src="/Photography/Horizontal/Пирин Фолк/DSC03460-Enhanced-NR.jpg" alt="" class="slide-bg-img">
+                <div class="slide-overlay"></div>
+                <div class="hero-content">
+                    <h1>Фотография</h1>
+                    <a href="photography.html" class="cta-button">Виж проектите</a>
+                </div>
+            </div>
+
+            <!-- Слайд 2: Видеообработка -->
+            <div class="hero-slide">
+                <!-- Тук слагаш пътя към твоята снимка -->
+                <img src="/Thumbnails/Жоро и Гената - тъмбнейл.jpg" alt="" class="slide-bg-img">
+                <div class="slide-overlay"></div>
+                <div class="hero-content">
+                    <h1>Видео Монтаж</h1>
+                    <a href="portfolio.html" class="cta-button">Гледай видеата</a>
+                </div>
+            </div>
+
+            <!-- Слайд 3: Тъмбнейли -->
+            <div class="hero-slide">
+                <!-- Тук слагаш пътя към твоята снимка -->
+                <img src="/Thumbnails/Кзак да си направим наргиле с повече дим - thumbnail - new - final.jpg" alt="Тъмбнейли фон" class="slide-bg-img">
+                <div class="slide-overlay"></div>
+                <div class="hero-content">
+                    <h1>Тъмбнейли</h1>
+                    <a href="thumbnails.html" class="cta-button">Разгледай дизайните</a>
+                </div>
+            </div>
+            
+        </section>
+
         <!-- Work Categories -->
-        <section class="work-categories1">
-            <section class="categories1">
+        <section id="portfolio" class="work-categories1">
+            <h2 class="section-title">Най-разглеждани</h2>
+            
+            <div class="categories1">
                 <ul class="category-list1">
                     <li>
                         <a href="portfolio.html?category=edited">
-                            <img src="edited.png" alt="Edited Videos" class="category-image1">
+                            <!-- Добавен loading="lazy" и превод на alt атрибутите -->
+                            <img src="edited.png" alt="Монтирани видеа" class="category-image1" loading="lazy">
                         </a>
                     </li>
                     <li>
                         <a href="shooted.html?category=shooted">
-                            <img src="shooted.png" alt="Shooted Videos" class="category-image1">
+                            <img src="shooted.png" alt="Заснети видеа" class="category-image1" loading="lazy">
                         </a>
                     </li>
                     <li>
                         <a href="thumbnails.html?category=thumbnails">
-                            <img src="thumbnails.png" alt="Thumbnails" class="category-image1">
+                            <img src="thumbnails.png" alt="Тъмбнейли" class="category-image1" loading="lazy">
                         </a>
                     </li>
-             
                 </ul>
-            </section>
-            
+            </div>
         </section>
 
-        <style>
-            body {
-                background-color: #222; /* dark gray */
-                margin: 0;
-                padding: 0;
-            }
-        </style>
-
-<section class="testimonials">
-    <h2>Мнения от клиенти</h2>
-    <div class="testimonial-slider">
-        <div class="testimonial">
-            <a href="https://www.instagram.com/justteya_/" target="_blank">
-            <img src="/Reviews/channels4_profile.jpg" alt="Teya" class="profile-picture">
-            </a>
-            <p>"Много съм доволна от помощта с тъмбнейлите за YouTube! Бяха направени точно както исках, бързо и с внимание към детайла. Резултатът наистина подобри визията на видеата ми. Благодаря много за съдействието!"</p>
-            <span>- Тея</span>
-        </div>
-        <div class="testimonial">
-            <a href="https://www.instagram.com/carstvoto_na_nargiletata/" target="_blank">
-            <img src="/Reviews/channels4_profile (1).jpg" alt="Zahi" class="profile-picture">
-            </a>
-
-            <p>"Много съм доволен от целият процес. Обработва, прави подходящи тъмбнейли, мотивира ме за още видеа, което за мен е най-важното качество. Отнася се с внимание към детайлите. Препоръчвам го на всеки! Благодарен съм, че работим заедно!"</p>
-            <span>- Захи, Царството на наргилетата</span>
-        </div>
+        <!-- Testimonials (С обновена структура за плавен преход) -->
+        <section class="testimonials">
+            <h2 class="section-title">Мнения от клиенти</h2>
+            <div class="testimonial-slider">
+                
                 <div class="testimonial">
-            <a href="https://www.instagram.com/vladislavchanev/" target="_blank">
-            <img src="/Reviews/unnamed (1).jpg" alt="Vladi" class="profile-picture">
-            </a>
-            <p>"Работата с него е удоволствие. Не просто изпълнява, а мисли, предлага идеи и подобрява проекта. Няма нужда да му се напомня, той следи сроковете и дърпа процеса напред. Винаги реагира навреме, комуникацията е ясна и директна. Истински партньор!"</p>
-            <span>- Vladislav Chanev</span>
-        </div>
-    </div>
+                    <a href="https://www.instagram.com/justteya_/" target="_blank">
+                        <img src="/Reviews/channels4_profile.jpg" alt="Снимка на Тея" class="profile-picture" loading="lazy">
+                    </a>
+                    <p>"Много съм доволна от помощта с тъмбнейлите за YouTube! Бяха направени точно както исках, бързо и с внимание към детайла. Резултатът наистина подобри визията на видеата ми. Благодаря много за съдействието!"</p>
+                    <span>- Тея</span>
+                </div>
 
+                <div class="testimonial">
+                    <a href="https://www.instagram.com/carstvoto_na_nargiletata/" target="_blank">
+                        <img src="/Reviews/channels4_profile (1).jpg" alt="Снимка на Захи" class="profile-picture" loading="lazy">
+                    </a>
+                    <p>"Много съм доволен от целият процес. Обработва, прави подходящи тъмбнейли, мотивира ме за още видеа, което за мен е най-важното качество. Отнася се с внимание към детайлите. Препоръчвам го на всеки! Благодарен съм, че работим заедно!"</p>
+                    <span>- Захи, Царството на наргилетата</span>
+                </div>
+
+                <div class="testimonial">
+                    <a href="https://www.instagram.com/vladislavchanev/" target="_blank">
+                        <img src="/Reviews/unnamed (1).jpg" alt="Снимка на Владислав" class="profile-picture" loading="lazy">
+                    </a>
+                    <p>"Работата с него е удоволствие. Не просто изпълнява, а мисли, предлага идеи и подобрява проекта. Няма нужда да му се напомня, той следи сроковете и дърпа процеса напред. Винаги реагира навреме, комуникацията е ясна и директна. Истински партньор!"</p>
+                    <span>- Vladislav Chanev</span>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 Kriskata. Всички права запазени.
+    </footer>
+
+    <!-- Скриптове (Групирани в края на body) -->
     <script>
+        // Функция за мобилното меню и анимацията на хамбургера
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const hamburger = document.getElementById('hamburger-icon');
+            
+            menu.classList.toggle('show');
+            hamburger.classList.toggle('open'); // Този клас върти чертичките в Х
+        }
+
         document.addEventListener("DOMContentLoaded", () => {
+            // --- Логика за Динамичния Hero слайдър ---
+            const heroSlides = document.querySelectorAll(".hero-slide");
+            if (heroSlides.length > 0) {
+                let currentHeroIndex = 0;
+                setInterval(() => {
+                    heroSlides[currentHeroIndex].classList.remove("active");
+                    currentHeroIndex = (currentHeroIndex + 1) % heroSlides.length;
+                    heroSlides[currentHeroIndex].classList.add("active");
+                }, 5000); // Сменя целия слайд на всеки 5 секунди
+            }
+
+            // --- Логика за слайдъра с мненията (Testimonials) ---
             const testimonials = document.querySelectorAll(".testimonial");
-            let currentIndex = 0;
+            if (testimonials.length === 0) return; // Защита, ако няма мнения
+
+            let currentTestimonialIndex = 0;
+            testimonials[currentTestimonialIndex].classList.add("active");
     
             function showNextTestimonial() {
-                testimonials[currentIndex].classList.remove("active");
-                currentIndex = (currentIndex + 1) % testimonials.length;
-                testimonials[currentIndex].classList.add("active");
+                testimonials[currentTestimonialIndex].classList.remove("active");
+                currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+                testimonials[currentTestimonialIndex].classList.add("active");
             }
     
-            // Initially show the first testimonial
-            testimonials[currentIndex].classList.add("active");
-    
-            // Auto-scroll every 10 seconds
-            setInterval(showNextTestimonial, 10000);
+            setInterval(showNextTestimonial, 8000);
         });
     </script>
-    
-</section>
-
-
-
-<footer>
-    © Kriskata
-</footer>
-
 </body>
 </html>

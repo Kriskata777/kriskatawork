@@ -3,55 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Преглед на албум</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Преглед на албум | Kriskata</title>
+    
     <link rel="icon" href="logo.png" type="image/png">
     
+    <!-- Добавяне на шрифт Sofia Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Вградени стилове (Обединени с новия дизайн и Masonry решетка) -->
     <style>
-        body { background-color: #1a1a1a; margin: 0; padding: 0; color: white; font-family: 'Helvetica Neue', Arial, sans-serif; }
-        
-        /* --- СТИЛОВЕ ЗА РЕШЕТКАТА (GRID) --- */
-        .photo-gallery {
+        /* --- Основни настройки (същите като home.html) --- */
+        :root {
+            --bg-color: #121212;
+            --surface-color: #1e1e1e;
+            --primary-color: #00d2ff;
+            --text-main: #f5f5f5;
+            --text-muted: #a0a0a0;
+            --transition: 0.3s ease-in-out;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Sofia Sans', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 50% 15%, rgba(0, 210, 255, 0.03) 0%, transparent 60%);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* --- Хедър и Навигация (Синхронизирани) --- */
+        header.main-header {
+            background-color: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 2005; 
+            border-bottom: 1px solid #333;
+            padding: 5px 5%;
             display: grid;
-            /* Прави колоните гъвкави, минимум 300px ширина */
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 15px;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            grid-column: 2 / 3;
+        }
+
+        .logo-container img {
+            height: 95px; 
+            width: auto;
+            border-radius: 8px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            grid-column: 3 / 4;
+        }
+
+        .desktop-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .desktop-menu a {
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color var(--transition);
+        }
+
+        .desktop-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 2010; 
+        }
+
+        .hamburger .line {
+            width: 30px;
+            height: 3px;
+            background-color: var(--text-main);
+            transition: all 0.3s ease-in-out;
+            transform-origin: center left;
+        }
+
+        .hamburger.open .line:nth-child(1) { transform: rotate(45deg) translate(2px, -2px); }
+        .hamburger.open .line:nth-child(2) { opacity: 0; }
+        .hamburger.open .line:nth-child(3) { transform: rotate(-45deg) translate(2px, 2px); }
+
+        .dropdown-content {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #0066ff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .dropdown-content.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .dropdown-content ul { text-align: center; padding: 0; }
+        .dropdown-content li { margin-bottom: 40px; }
+        .dropdown-content a { font-size: 2.5rem; font-weight: bold; color: #ffffff; }
+
+        /* --- Секция Албум Заглавие --- */
+        .album-header {
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 20px;
+            border: 1px solid #444;
+            border-radius: 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            transition: all var(--transition);
+        }
+
+        .back-btn:hover {
+            color: var(--text-main);
+            border-color: var(--text-main);
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* --- MASONRY GALLERY (Решетка) --- */
+        .photo-gallery {
             padding: 20px;
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
+            /* Използваме CSS колони за Masonry ефекта */
+            column-count: 3;
+            column-gap: 20px;
+            min-height: 50vh;
         }
 
         .photo-item {
             cursor: pointer;
+            margin-bottom: 20px;
+            /* Това спира снимките да се разделят между две колони */
+            break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            
+            border-radius: 8px;
             overflow: hidden;
-            border-radius: 4px;
+            background: #2a2a2a; 
             position: relative;
-            /* Това прави кутийките с фиксирана височина, за да е подредено. 
-               Ако махнеш height, ще стане като "Masonry" (разчупено), но може да размести реда. */
-            height: 300px; 
-            background: #2a2a2a; /* Фон докато зарежда */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .photo-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-            z-index: 2;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
         .photo-thumb {
             width: 100%;
-            height: 100%;
-            object-fit: cover; /* cover = запълва кутийката (изрязва). contain = вижда се цялата (има празно място) */
+            height: auto; /* Запазваме оригиналните пропорции (Masonry) */
             display: block;
-            transition: opacity 0.3s ease;
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.4s ease;
+            filter: brightness(0.9); /* Леко тъмни първоначално */
         }
 
-        /* --- СТИЛОВЕ ЗА LIGHTBOX (Пълен екран) --- */
+        /* Hover ефекти */
+        .photo-item:hover .photo-thumb {
+            transform: scale(1.03); /* Леко приближаване */
+            filter: brightness(1.1); /* Просветляване */
+        }
+        
+        .photo-item::after {
+            content: '';
+            position: absolute;
+            top:0; left:0; width:100%; height:100%;
+            box-shadow: inset 0 0 0 2px transparent;
+            transition: box-shadow 0.3s ease;
+            pointer-events: none; /* За да може да се клика под него */
+            border-radius: 8px;
+        }
+
+        .photo-item:hover::after {
+            box-shadow: inset 0 0 0 2px var(--primary-color);
+        }
+
+
+        /* --- LIGHTBOX (Пълен екран) --- */
         .lightbox {
             display: none;
             position: fixed;
-            z-index: 2000;
+            z-index: 3000;
             left: 0;
             top: 0;
             width: 100%;
@@ -60,6 +251,7 @@
             justify-content: center;
             align-items: center;
             user-select: none;
+            backdrop-filter: blur(5px);
         }
 
         .lightbox.active { display: flex; }
@@ -73,8 +265,8 @@
         .lightbox-image {
             max-width: 100%;
             max-height: 90vh;
-            border: 2px solid #fff;
-            box-shadow: 0 0 30px rgba(0,0,0,0.9);
+            border-radius: 4px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.8);
             object-fit: contain;
         }
 
@@ -83,76 +275,128 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            color: white;
+            color: rgba(255,255,255,0.6);
             font-size: 50px;
-            font-weight: bold;
-            padding: 20px;
+            font-weight: 300;
+            padding: 20px 30px;
             cursor: pointer;
-            transition: 0.3s;
-            background: rgba(0,0,0,0.3);
-            border-radius: 5px;
+            transition: color 0.3s ease, background 0.3s ease;
+            border-radius: 8px;
             user-select: none;
         }
 
-        .lightbox-btn:hover { background: rgba(255,255,255,0.2); }
-        .prev { left: 20px; }
-        .next { right: 20px; }
+        .lightbox-btn:hover { 
+            color: #fff;
+            background: rgba(255,255,255,0.1); 
+        }
+        .prev { left: 2vw; }
+        .next { right: 2vw; }
 
         .lightbox-close {
             position: absolute;
             top: 20px;
             right: 30px;
-            color: #ddd;
+            color: rgba(255,255,255,0.6);
             font-size: 40px;
-            font-weight: bold;
+            font-weight: 300;
             cursor: pointer;
-            transition: 0.3s;
-            z-index: 2001;
+            transition: color 0.3s ease;
+            z-index: 3001;
         }
         .lightbox-close:hover { color: #fff; }
 
-        /* Лоудинг анимация */
-        .loading-text {
+        /* Лоудинг анимация (Пулсираща точка) */
+        .loading-dot {
             position: absolute;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
-            color: #888;
+            width: 12px; height: 12px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            animation: pulse 1s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            from { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+            to { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+        }
+
+        /* --- Футър --- */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #0a0a0a;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #222;
+            margin-top: 40px;
+        }
+
+        /* --- Респонсив Дизайн --- */
+        @media (max-width: 1024px) {
+            .photo-gallery { column-count: 2; }
+        }
+
+        @media (max-width: 768px) {
+            header.main-header { grid-template-columns: 1fr auto 1fr; }
+            .desktop-menu { display: none; }
+            .hamburger { display: flex; justify-self: end; }
+            
+            .section-title { font-size: 2rem; }
+            .photo-gallery { column-count: 1; }
+            
+            .lightbox-btn { padding: 10px 15px; font-size: 30px; }
         }
     </style>
 </head>
-<body class="photography-page">
-    
-<header>
-    <div class="logo-container">
-        <a href="home.html">
-            <img src="logo.png" alt="My Logo" class="logo">
-        </a>
-    </div>
+<body>
 
-    <nav>
-        <ul class="desktop-menu">
-            <li><a href="work.html">Категории</a></li>
-            <li><a href="contact.html">Контакти</a></li>
-        </ul>
-
-        <div class="hamburger" onclick="toggleMenu()">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+    <!-- Header -->
+    <header class="main-header">
+        <div></div> 
+        
+        <div class="logo-container">
+            <a href="home.html">
+                <img src="logo.png" alt="Kriskata Logo" class="logo">
+            </a>
         </div>
-    </nav>
-</header>
-<ul class="dropdown-content">
-    <li><a href="work.html" class="menu-link">Категории</a></li>
-    <li><a href="contact.html" class="menu-link">Контакти</a></li>
-</ul>
-<script src="menu.js"></script>
 
-    <header class="hero" style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
-        <h2 id="album-title">Зареждане на албума...</h2>
-        <a href="photography.html" style="color: #bbb; text-decoration: none; font-size: 0.9rem; border-bottom: 1px solid #444; padding-bottom: 2px;">← Назад към всички албуми</a>
+        <nav>
+            <ul class="desktop-menu">
+                <li><a href="work.html">Категории</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger-icon" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
     </header>
 
+    <!-- Мобилно меню -->
+    <div class="dropdown-content" id="mobileMenu">
+        <ul>
+            <li><a href="work.html" onclick="toggleMenu()">Категории</a></li>
+            <li><a href="contact.html" onclick="toggleMenu()">Контакти</a></li>
+        </ul>
+    </div>
+
+    <!-- Основно съдържание -->
+    <main>
+        <section class="album-header">
+            <h1 class="section-title" id="album-title">Зареждане...</h1>
+            <a href="photography.html" class="back-btn">← Назад към всички албуми</a>
+        </section>
+
+        <!-- Галерия -->
+        <div class="photo-gallery" id="gallery-container">
+            <!-- Снимките ще се генерират тук от JS -->
+        </div>
+    </main>
+
+    <!-- Lightbox (Цял екран) -->
     <div class="lightbox" id="lightbox">
         <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
         
@@ -160,18 +404,26 @@
         <div class="lightbox-btn next" onclick="changeImage(1)">&#10095;</div>
 
         <div class="lightbox-content">
-            <img class="lightbox-image" id="lightbox-img" src="">
+            <img class="lightbox-image" id="lightbox-img" src="" alt="Уголемена снимка">
         </div>
     </div>
-
-    <div class="photo-gallery" id="gallery-container"></div>
     
-    <footer style="text-align: center; padding: 40px 20px; color: #666; font-size: 0.8rem;">
-        © Kriskata Photography
+    <footer>
+        © 2026 Kriskata. Всички права запазени.
     </footer>
 
+    <!-- Скриптове -->
     <script>
-        // Глобални променливи за галерията
+        // --- 1. Мобилно меню ---
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const hamburger = document.getElementById('hamburger-icon');
+            
+            menu.classList.toggle('show');
+            hamburger.classList.toggle('open');
+        }
+
+        // --- 2. Логика за галерията ---
         let currentImages = [];
         let currentIndex = 0;
 
@@ -181,12 +433,57 @@
             const container = document.getElementById('gallery-container');
             const titleElement = document.getElementById('album-title');
 
-            fetch('data.json')
-                .then(response => response.json())
+            const renderGallery = (albumTitle, images) => {
+                titleElement.innerText = albumTitle;
+                document.title = albumTitle + " | Kriskata";
+                currentImages = images;
+
+                if (currentImages.length === 0) {
+                    container.innerHTML = "<p style='text-align:center; width:100%; color:var(--text-muted); grid-column: 1/-1;'>Няма качени снимки в този албум.</p>";
+                    return;
+                }
+
+                container.innerHTML = ''; // Изчистване
+
+                currentImages.forEach((imgSrc, index) => {
+                    let cleanSrc = imgSrc.replace('public/', ''); 
+
+                    const div = document.createElement('div');
+                    div.className = 'photo-item';
+                    
+                    // Анимация за зареждане
+                    div.innerHTML = '<div class="loading-dot"></div>';
+
+                    const img = document.createElement('img');
+                    img.className = 'photo-thumb';
+                    img.alt = albumTitle + ' photo';
+                    img.loading = 'lazy';
+                    
+                    // Показва снимката, когато е готова, и маха loading анимацията
+                    img.onload = () => { 
+                        const dot = div.querySelector('.loading-dot');
+                        if(dot) dot.style.display = 'none'; 
+                    };
+                    img.src = cleanSrc; 
+
+                    div.addEventListener('click', () => {
+                        openLightbox(index);
+                    });
+                    
+                    div.appendChild(img);
+                    container.appendChild(div);
+                });
+            };
+
+            // Опит за зареждане от data.json
+            fetch('./data.json')
+                .then(response => {
+                    if (!response.ok) throw new Error("Файлът не е намерен (вероятно си в Preview режим)");
+                    return response.json();
+                })
                 .then(data => {
-                    // Търсене на албума в новата и старата структура
                     const albumsList = data.albums || (data.data && data.data.albums) || [];
-                    const album = albumsList.find(a => a.id === albumId);
+                    const album = albumsList.find(a => String(a.id) === String(albumId));
 
                     if (!album) {
                         titleElement.innerText = "Албумът не е намерен";
@@ -194,57 +491,32 @@
                         return;
                     }
 
-                    titleElement.innerText = album.title;
-                    document.title = album.title + " | Kriskata";
-
-                    // Извличане на снимките
+                    // Поддръжка за стара/нова структура
+                    let imagesArray = [];
                     if (album.photos && Array.isArray(album.photos)) {
-                        currentImages = album.photos.map(p => p.image); // Новият CMS
+                        imagesArray = album.photos.map(p => p.image); 
                     } else if (album.images && Array.isArray(album.images)) {
-                        currentImages = album.images; // Старият код
+                        imagesArray = album.images; 
                     }
 
-                    if (currentImages.length === 0) {
-                        container.innerHTML = "<p style='text-align:center; width:100%; color:#888;'>Няма качени снимки в този албум.</p>";
-                        return;
-                    }
-
-                    // Генериране на HTML за снимките
-                    currentImages.forEach((imgSrc, index) => {
-                        let cleanSrc = imgSrc.replace('public/', ''); 
-
-                        const div = document.createElement('div');
-                        div.className = 'photo-item';
-                        
-                        // Добавяме иконка за зареждане
-                        div.innerHTML = '<span class="loading-text">...</span>';
-
-                        const img = document.createElement('img');
-                        img.dataset.src = cleanSrc; // Ползваме data-src за Lazy Loading
-                        img.className = 'photo-thumb';
-                        img.alt = album.title + ' photo';
-                        img.loading = 'lazy'; // Вградена оптимизация на браузъра
-                        
-                        // Когато снимката се зареди, я показваме
-                        img.onload = () => { div.querySelector('.loading-text').style.display = 'none'; };
-                        img.src = cleanSrc; // Започва зареждането
-
-                        // Клик събитие за отваряне на Lightbox
-                        div.addEventListener('click', () => {
-                            openLightbox(index);
-                        });
-                        
-                        div.appendChild(img);
-                        container.appendChild(div);
-                    });
+                    renderGallery(album.title, imagesArray);
                 })
                 .catch(err => {
-                    console.error("Error:", err);
-                    titleElement.innerText = "Грешка при зареждане";
+                    console.warn(err.message + ". Зареждат се демо данни.");
+                    // АКО СМЕ В ПРЕВЮ: Зареждаме Демо Сватбен Албум
+                    const dummyImages = [
+                        "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        "https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Вертикална
+                        "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        "https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Вертикална
+                        "https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    ];
+                    renderGallery("Сватбата на Иван и Мария", dummyImages);
                 });
         });
 
-        // --- LIGHTBOX ФУНКЦИОНАЛНОСТ ---
+        // --- 3. LIGHTBOX (Цял екран) ---
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
 
@@ -263,7 +535,6 @@
         function changeImage(direction) {
             currentIndex += direction;
             
-            // Логика за въртене в кръг (ако си на последната, отива на първата)
             if (currentIndex >= currentImages.length) {
                 currentIndex = 0;
             } else if (currentIndex < 0) {
@@ -274,22 +545,18 @@
         }
 
         function updateLightboxImage() {
-            // Изчиства пътя (ако има public/)
             let src = currentImages[currentIndex].replace('public/', '');
             lightboxImg.src = src;
         }
 
-        // Затваряне при клик извън снимката
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) {
                 closeLightbox();
             }
         });
 
-        // Управление с клавиатура
         document.addEventListener('keydown', (e) => {
             if (!lightbox.classList.contains('active')) return;
-
             if (e.key === 'Escape') closeLightbox();
             if (e.key === 'ArrowLeft') changeImage(-1);
             if (e.key === 'ArrowRight') changeImage(1);

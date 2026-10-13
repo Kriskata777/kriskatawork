@@ -1,102 +1,331 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Work</title>
-        <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
-        <link rel="icon" href="logo.png" type="image/png">
-    </head>
-<body>
-    <canvas id="starCanvas"></canvas> <!-- Add the canvas element here -->
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Категории</title>
+    <link rel="icon" href="logo.png" type="image/png">
     
-<header>
-    <div class="logo-container">
-        <a href="home.html">
-            <img src="logo.png" alt="My Logo" class="logo">
-        </a>
-    </div>
+    <!-- Добавяне на шрифт Sofia Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-    <nav>
-        <ul class="desktop-menu">
-            <li><a href="work.html">Категории</a></li>
-            <li><a href="contact.html">Контакти</a></li>
-        </ul>
-
-        <div class="hamburger" onclick="toggleMenu()">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-    </nav>
-</header>
-
-
-        <ul class="dropdown-content">
-            <li><a href="work.html" class="menu-link">Категории</a></li>
-            <li><a href="contact.html" class="menu-link">Контакти</a></li>
-        </ul>
-
-    <script src="menu.js"></script>
-</body>
-    </header>
-
-    <section class="categories">
-        <ul class="category-list">
-            <li>
-                <!--<h2 style="color: white;">Edited Videos</h2>-->
-                <a href="portfolio.html?category=edited">
-                    <img src="edited.png" alt="Edited Videos" class="category-image"> <!-- Replace with your image -->
-                </a>
-            </li>
-            <li>
-                <!--<h2 style="color: white;">Shooted Videos</h2>-->
-                <a href="shooted.html?category=shooted">
-                    <img src="shooted.png" alt="Shooted Videos" class="category-image"> <!-- Replace with your image -->
-                </a>
-            </li>
-            <li>
-                <!--<h2 style="color: white;">Shooted Videos</h2>-->
-                <a href="photography.html">
-                    <img src="photography.png" alt="Photography" class="category-image"> <!-- Replace with your image -->
-                </a>
-            </li>
-            <li>
-                <!--<h2 style="color: white;">Subtitles</h2>-->
-                <a href="subtitles.html?category=subtitles">
-                    <img src="subtitles.png" alt="Subtitles" class="category-image"> <!-- Replace with your image -->
-                </a>
-            </li>
-            <li>
-                <!--<h2 style="color: white;">Thumbnails</h2>-->
-                <a href="thumbnails.html?category=thumbnails">
-                    <img src="thumbnails.png" alt="Thumbnails" class="category-image"> <!-- Replace with your image -->
-                </a>
-            </li>
-            <li>
-                <!--<h2 style="color: white;">Covers</h2>-->
-                <a href="covers.html?category=covers">
-                    <img src="covers.png" alt="Covers" class="category-image"> <!-- Replace with your image -->
-                </a>
-            </li>
-            
-            <li>
-
-        </ul>
-    </section>
-
-
-    
+    <!-- Вградени стилове -->
     <style>
-        body {
-            background-color: #222; /* dark gray */
+        /* --- Основни настройки (същите като home.html) --- */
+        :root {
+            --bg-color: #121212;
+            --surface-color: #1e1e1e;
+            --primary-color: #00d2ff;
+            --text-main: #f5f5f5;
+            --text-muted: #a0a0a0;
+            --transition: 0.3s ease-in-out;
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Sofia Sans', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            /* Изчистен фон с много леко централно сияние */
+            background-image: radial-gradient(circle at 50% 30%, rgba(0, 210, 255, 0.03) 0%, transparent 60%);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* --- Хедър и Навигация (Синхронизирани с home.html) --- */
+        header.main-header {
+            background-color: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 2001;
+            border-bottom: 1px solid #333;
+            padding: 5px 5%;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            grid-column: 2 / 3;
+        }
+
+        .logo-container img {
+            height: 95px; 
+            width: auto;
+            border-radius: 8px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            grid-column: 3 / 4;
+        }
+
+        .desktop-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .desktop-menu a {
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color var(--transition);
+        }
+
+        .desktop-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Хамбургер --- */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 2002;
+        }
+
+        .hamburger .line {
+            width: 30px;
+            height: 3px;
+            background-color: var(--text-main);
+            transition: all 0.3s ease-in-out;
+            transform-origin: center left;
+        }
+
+        .hamburger.open .line:nth-child(1) { transform: rotate(45deg) translate(2px, -2px); }
+        .hamburger.open .line:nth-child(2) { opacity: 0; }
+        .hamburger.open .line:nth-child(3) { transform: rotate(-45deg) translate(2px, 2px); }
+
+        /* --- Мобилно меню --- */
+        .dropdown-content {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #0066ff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .dropdown-content.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .dropdown-content ul { text-align: center; padding: 0; }
+        .dropdown-content li { margin-bottom: 40px; }
+        .dropdown-content a { font-size: 2.5rem; font-weight: bold; color: #ffffff; }
+
+        /* --- Секция Категории (Изцяло преработена) --- */
+        .categories-section {
+            padding: 60px 20px;
+            min-height: calc(100vh - 180px); /* За да държи футъра долу */
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .categories-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 колони на десктоп */
+            gap: 30px;
+        }
+
+        .category-list li a {
+            display: block;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: var(--surface-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+
+        .category-list li a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 210, 255, 0.25);
+            border: 1px solid rgba(0, 210, 255, 0.1); /* Лек акцент при посочване */
+        }
+
+        .category-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            background-color: transparent; 
+        }
+
+        /* --- Футър --- */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #0a0a0a;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #222;
+        }
+
+        /* --- Респонсив Дизайн --- */
+        @media (max-width: 1024px) {
+            .category-list {
+                grid-template-columns: repeat(2, 1fr); /* 2 колони на таблет */
+            }
+        }
+
+        @media (max-width: 768px) {
+            header.main-header {
+                grid-template-columns: 1fr auto 1fr;
+            }
+            .desktop-menu { display: none; }
+            /* На мобилни избутваме хамбургера максимално вдясно */
+            .hamburger { display: flex; justify-self: end; }
+            
+            .category-list {
+                grid-template-columns: 1fr; /* 1 колона на телефон */
+                gap: 40px;
+            }
+            .section-title { font-size: 2rem; }
+        }
     </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div></div> <!-- Симетрия -->
+        
+        <div class="logo-container">
+            <a href="home.html">
+                <img src="logo.png" alt="Kriskata Logo" class="logo">
+            </a>
+        </div>
+
+        <nav>
+            <ul class="desktop-menu">
+                <!-- Премахнат style="color: var(--primary-color);" -->
+                <li><a href="work.html">Категории</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger-icon" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Мобилно меню -->
+    <div class="dropdown-content" id="mobileMenu">
+        <ul>
+            <li><a href="work.html" onclick="toggleMenu()">Категории</a></li>
+            <li><a href="contact.html" onclick="toggleMenu()">Контакти</a></li>
+        </ul>
+    </div>
+
+    <!-- Основно съдържание -->
+    <main>
+        <section class="categories-section">
+            <h1 class="section-title">Всички категории</h1>
+            
+            <div class="categories-container">
+                <ul class="category-list">
+                    <li>
+                        <a href="portfolio.html?category=edited">
+                            <img src="edited.png" alt="Монтирани видеа" class="category-image" loading="lazy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shooted.html?category=shooted">
+                            <img src="shooted.png" alt="Заснети видеа" class="category-image" loading="lazy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="photography.html">
+                            <img src="photography.png" alt="Фотография" class="category-image" loading="lazy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="subtitles.html?category=subtitles">
+                            <img src="subtitles.png" alt="Субтитри" class="category-image" loading="lazy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="thumbnails.html?category=thumbnails">
+                            <img src="thumbnails.png" alt="Тъмбнейли" class="category-image" loading="lazy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="covers.html?category=covers">
+                            <img src="covers.png" alt="Ковъри" class="category-image" loading="lazy">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 Kriskata. Всички права запазени.
+    </footer>
+
+    <!-- Скриптове -->
+    <script>
+        // Функция за мобилното меню
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const hamburger = document.getElementById('hamburger-icon');
+            
+            menu.classList.toggle('show');
+            hamburger.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
-
-<footer>
-    © Kriskata
-</footer>
