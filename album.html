@@ -12,9 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Вградени стилове (Обединени с новия дизайн и Masonry решетка) -->
+    <!-- Вградени стилове -->
     <style>
-        /* --- Основни настройки (същите като home.html) --- */
+        /* --- Основни настройки --- */
         :root {
             --bg-color: #121212;
             --surface-color: #1e1e1e;
@@ -48,7 +48,7 @@
             list-style: none;
         }
 
-        /* --- Хедър и Навигация (Синхронизирани) --- */
+        /* --- Хедър и Навигация --- */
         header.main-header {
             background-color: rgba(18, 18, 18, 0.95);
             backdrop-filter: blur(10px);
@@ -188,7 +188,6 @@
             padding: 20px;
             max-width: 1600px;
             margin: 0 auto;
-            /* Използваме CSS колони за Masonry ефекта */
             column-count: 3;
             column-gap: 20px;
             min-height: 50vh;
@@ -197,7 +196,6 @@
         .photo-item {
             cursor: pointer;
             margin-bottom: 20px;
-            /* Това спира снимките да се разделят между две колони */
             break-inside: avoid;
             -webkit-column-break-inside: avoid;
             page-break-inside: avoid;
@@ -211,16 +209,15 @@
 
         .photo-thumb {
             width: 100%;
-            height: auto; /* Запазваме оригиналните пропорции (Masonry) */
+            height: auto; 
             display: block;
             transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.4s ease;
-            filter: brightness(0.9); /* Леко тъмни първоначално */
+            filter: brightness(0.9); 
         }
 
-        /* Hover ефекти */
         .photo-item:hover .photo-thumb {
-            transform: scale(1.03); /* Леко приближаване */
-            filter: brightness(1.1); /* Просветляване */
+            transform: scale(1.03); 
+            filter: brightness(1.1); 
         }
         
         .photo-item::after {
@@ -229,7 +226,7 @@
             top:0; left:0; width:100%; height:100%;
             box-shadow: inset 0 0 0 2px transparent;
             transition: box-shadow 0.3s ease;
-            pointer-events: none; /* За да може да се клика под него */
+            pointer-events: none; 
             border-radius: 8px;
         }
 
@@ -268,6 +265,8 @@
             border-radius: 4px;
             box-shadow: 0 0 40px rgba(0,0,0,0.8);
             object-fit: contain;
+            /* Изключване на стандартното поведение на снимките при влачене на телефон */
+            pointer-events: none; 
         }
 
         /* Бутони за навигация */
@@ -283,6 +282,7 @@
             transition: color 0.3s ease, background 0.3s ease;
             border-radius: 8px;
             user-select: none;
+            z-index: 3002;
         }
 
         .lightbox-btn:hover { 
@@ -345,7 +345,8 @@
             .section-title { font-size: 2rem; }
             .photo-gallery { column-count: 1; }
             
-            .lightbox-btn { padding: 10px 15px; font-size: 30px; }
+            /* На мобилни устройства бутоните може да пречат при swipe, така че ги правим по-малки или ги крием */
+            .lightbox-btn { padding: 10px 15px; font-size: 30px; display: none; } /* Скрити на телефон, защото ще се слайдва */
         }
     </style>
 </head>
@@ -459,7 +460,6 @@
                     img.alt = albumTitle + ' photo';
                     img.loading = 'lazy';
                     
-                    // Показва снимката, когато е готова, и маха loading анимацията
                     img.onload = () => { 
                         const dot = div.querySelector('.loading-dot');
                         if(dot) dot.style.display = 'none'; 
@@ -478,7 +478,7 @@
             // Опит за зареждане от data.json
             fetch('./data.json')
                 .then(response => {
-                    if (!response.ok) throw new Error("Файлът не е намерен (вероятно си в Preview режим)");
+                    if (!response.ok) throw new Error("Файлът не е намерен");
                     return response.json();
                 })
                 .then(data => {
@@ -491,7 +491,6 @@
                         return;
                     }
 
-                    // Поддръжка за стара/нова структура
                     let imagesArray = [];
                     if (album.photos && Array.isArray(album.photos)) {
                         imagesArray = album.photos.map(p => p.image); 
@@ -503,12 +502,11 @@
                 })
                 .catch(err => {
                     console.warn(err.message + ". Зареждат се демо данни.");
-                    // АКО СМЕ В ПРЕВЮ: Зареждаме Демо Сватбен Албум
                     const dummyImages = [
                         "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        "https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Вертикална
+                        "https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", 
                         "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                        "https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Вертикална
+                        "https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", 
                         "https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                         "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                     ];
@@ -516,7 +514,7 @@
                 });
         });
 
-        // --- 3. LIGHTBOX (Цял екран) ---
+        // --- 3. LIGHTBOX (Цял екран + SWIPE за мобилни) ---
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
 
@@ -524,12 +522,12 @@
             currentIndex = index;
             updateLightboxImage();
             lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Спира скрола на сайта отзад
+            document.body.style.overflow = 'hidden'; 
         }
 
         function closeLightbox() {
             lightbox.classList.remove('active');
-            document.body.style.overflow = 'auto'; // Пуска скрола
+            document.body.style.overflow = 'auto'; 
         }
 
         function changeImage(direction) {
@@ -549,18 +547,46 @@
             lightboxImg.src = src;
         }
 
+        // Затваряне при клик извън снимката
         lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
+            if (e.target === lightbox || e.target.classList.contains('lightbox-content')) {
                 closeLightbox();
             }
         });
 
+        // Клавиатура (за десктоп)
         document.addEventListener('keydown', (e) => {
             if (!lightbox.classList.contains('active')) return;
             if (e.key === 'Escape') closeLightbox();
             if (e.key === 'ArrowLeft') changeImage(-1);
             if (e.key === 'ArrowRight') changeImage(1);
         });
+
+        // --- ДОБАВЕНО: SWIPE ЛОГИКА ЗА ТЕЛЕФОНИ ---
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const minSwipeDistance = 50; // Минимално разстояние в пиксели за да се зачете swipe
+
+        function handleGesture() {
+            // Ако пръстът е преместен наляво (свип наляво -> следваща снимка)
+            if (touchEndX < touchStartX - minSwipeDistance) {
+                changeImage(1);
+            }
+            // Ако пръстът е преместен надясно (свип надясно -> предишна снимка)
+            if (touchEndX > touchStartX + minSwipeDistance) {
+                changeImage(-1);
+            }
+        }
+
+        lightbox.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+
+        lightbox.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleGesture();
+        }, {passive: true});
+
     </script>
 </body>
 </html>
