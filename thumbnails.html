@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kriskata | Тъмбнейли</title>
+    <title>Тъмбнейли</title>
     <link rel="icon" href="logo.png" sizes="32x32" type="image/png">
     
     <!-- Добавяне на шрифт Sofia Sans -->
@@ -170,12 +170,11 @@
             font-weight: 400;
         }
 
-        /* Обща мрежа за Тъмбнейлите и Експериментите */
         .project-list-thumbnails, .experiment-list {
             max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 на ред */
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
@@ -229,12 +228,10 @@
             transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
         }
 
-        /* "След" снимката е скрита по подразбиране */
         .after-image {
             opacity: 0;
         }
 
-        /* Етикети Преди/След */
         .badge {
             position: absolute;
             top: 15px;
@@ -263,14 +260,13 @@
             opacity: 0;
         }
 
-        /* Hover Ефекти за Експериментите */
         .experiment-container:hover .before-image {
-            opacity: 0; /* Скрива оригиналната */
+            opacity: 0;
         }
         
         .experiment-container:hover .after-image {
-            opacity: 1; /* Показва обработената */
-            transform: scale(1.05); /* Леко приближаване за УАУ ефект */
+            opacity: 1;
+            transform: scale(1.05);
         }
 
         .experiment-container:hover .badge-before {
@@ -291,10 +287,9 @@
             margin-top: 40px;
         }
 
-        /* Респонсив */
         @media (max-width: 1024px) and (min-width: 769px) {
             .project-list-thumbnails, .experiment-list {
-                grid-template-columns: repeat(2, 1fr); /* 2 на ред за таблети */
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -306,7 +301,7 @@
             .hamburger { display: flex; justify-self: end; }
             .section-title { font-size: 2rem; }
             .project-list-thumbnails, .experiment-list {
-                grid-template-columns: 1fr; /* 1 на ред на телефон */
+                grid-template-columns: 1fr;
                 gap: 20px;
             }
         }
@@ -337,8 +332,6 @@
         </nav>
     </header>
 
-<<<<<<< HEAD
-    <!-- Мобилно меню -->
     <div class="dropdown-content" id="mobileMenu">
         <ul>
             <li><a href="work.html" onclick="toggleMenu()">Категории</a></li>
@@ -419,92 +412,6 @@
                 </div>
                 <div class="thumbnail-container">
                     <img src="/Thumbnails/Пица предизвикателство - thumbnail.jpg" alt="Thumbnail 23" class="thumbnail-image" loading="lazy"> 
-=======
-    <section class="projects">
-        <h1>Тъмбнейли</h1>
-                <div class="project-list-thumbnails">
-                        <div class="thumbnail-container">
-            <img src="/Thumbnails/Жоро и Гената - тъмбнейл.jpg" alt="Thumbnail 1" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-                        <div class="thumbnail-container">
-            <img src="/Thumbnails/Cafe_racer_-_.jpg" alt="Thumbnail 1" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-                        <div class="thumbnail-container">
-            <img src="/Thumbnails/Кадин_мост.jpg" alt="Thumbnail 1" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="project-list-thumbnails">
-                        <div class="thumbnail-container">
-                <img src="/Thumbnails/Work in light thumbnail.jpg" alt="Thumbnail 1" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Barcelona vlog - .jpg" alt="Thumbnail 1" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Подкаст с Ицака -.jpg" alt="Thumbnail 1" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Подкаст с Дани и Цвети 2.jpg" alt="Thumbnail 2" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Наргиле самолет.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/darkside в облако.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Щипки.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Geometry dragon - final.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Kaya ревю 2 - new.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Кая ревю тъмбнейл - new.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/да го мия ли - тъмбнейл.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Кзак да си направим наргиле с повече дим - thumbnail - new - final.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Преглътни или отгатни.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Overdozz thumbnail - new.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Кетчъри - thumbnail - new - final.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Ревю на котлон1-1.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Doosha Guardian ревю 1-4.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Totem review - new thumb.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Dubai vlog.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-            <div class="thumbnail-container">
-                <img src="/Thumbnails/Пица предизвикателство - thumbnail.jpg" alt="Thumbnail 3" class="thumbnail-image"> <!-- Replace with your image -->
-            </div>
-        </div>
-    </section>
-
-    <section class="experiments">
-        <h1>Experiments</h1>
-        <h3>Видеата са пуснати с тъмбнейлите, които виждате първоначално, аз просто реших да експериментирам и да се пробвам да ги направя по-добре</h3>
-        <div class="experiment-list">
-            <div class="experiment-container">
-                <div class="experiment-thumbnail">
-                    <img src="/Experiments/yPlWiAoQXKw-HD.jpg" alt="Before" class="before-image">
-                    <img src="/Experiments/Дух или не - еп 6.png" alt="After" class="after-image">
->>>>>>> f897cc3d37635c56d5de66af6fe9e47466e58bdf
                 </div>
             </div>
         </section>
@@ -538,7 +445,7 @@
                         <span class="badge badge-before">Преди</span>
                         <span class="badge badge-after">След</span>
                         <img src="/Experiments/hi19MD9tWI4-HD.jpg" alt="Before" class="before-image" loading="lazy">
-                        <img src="/Experiments/Teya Malta thumbnail.jpg" alt="After" class="after-image" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt="After" class="after-image" loading="lazy">
                     </div>
                 </div>
                 
@@ -551,7 +458,6 @@
     </footer>
 
     <script>
-        // Функция за мобилното меню
         function toggleMenu() {
             const menu = document.getElementById('mobileMenu');
             const hamburger = document.getElementById('hamburger-icon');
@@ -561,9 +467,4 @@
         }
     </script>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
-
->>>>>>> f897cc3d37635c56d5de66af6fe9e47466e58bdf
