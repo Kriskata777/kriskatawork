@@ -2279,6 +2279,19 @@
         "/Photography/Horizontal/Празник на плодородието/12.jpg",
         "/Photography/Horizontal/Празник на плодородието/13.jpg"
       ]
+    },
+    {
+      "id": "petrich",
+      "title": "Южни слънца",
+      "cover": "/Photography/Uploads/5-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/9-.jpg"
+        }
+      ]
     }
   ]
 }
