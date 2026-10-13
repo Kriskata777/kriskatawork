@@ -9,12 +9,14 @@
     
     <link rel="icon" href="logo.png" type="image/png">
     
+    <!-- Netlify Identity Widget (Задължителен за ресет на парола и логин) -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    
     <!-- Добавяне на шрифт Sofia Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Вградени стилове за превюто (В реалния проект ги премести в style.css) -->
     <style>
         /* --- Основни настройки и променливи --- */
         :root {
@@ -169,8 +171,6 @@
             color: #ffffff;
         }
 
-        /* Премахваме стария .close-btn, защото хамбургерът става на Х */
-
         /* --- Hero Секция (Динамичен слайдър с текст и бутони) --- */
         .hero {
             position: relative;
@@ -204,7 +204,6 @@
             z-index: 10;
         }
 
-        /* Заменяме .slide-bg с реални <img> тагове */
         .slide-bg-img {
             position: absolute;
             top: 0;
@@ -412,7 +411,7 @@
 </head>
 <body>
 
-    <!-- Header (Коригиран и обединен) -->
+    <!-- Header -->
     <header class="main-header">
         <!-- Празен div за запазване на симетрията в лявата колона на грида -->
         <div></div>
@@ -440,7 +439,6 @@
 
     <!-- Мобилно меню на цял екран -->
     <div class="dropdown-content" id="mobileMenu">
-        <!-- Бутонът X е премахнат, хамбургерът от хедъра над него ще върши тази работа -->
         <ul>
             <li><a href="work.html" class="menu-link" onclick="toggleMenu()">Категории</a></li>
             <li><a href="contact.html" class="menu-link" onclick="toggleMenu()">Контакти</a></li>
@@ -448,12 +446,11 @@
     </div>
 
     <main>
-        <!-- Нова Hero Секция с Динамичен Слайдър -->
+        <!-- Hero Секция с Динамичен Слайдър -->
         <section class="hero">
             
             <!-- Слайд 1: Фотография -->
             <div class="hero-slide active">
-                <!-- Тук слагаш пътя към твоята снимка, напр. src="images/photo-bg.jpg" -->
                 <img src="/Photography/Horizontal/Пирин Фолк/DSC03460-Enhanced-NR.jpg" alt="" class="slide-bg-img">
                 <div class="slide-overlay"></div>
                 <div class="hero-content">
@@ -464,7 +461,6 @@
 
             <!-- Слайд 2: Видеообработка -->
             <div class="hero-slide">
-                <!-- Тук слагаш пътя към твоята снимка -->
                 <img src="/Thumbnails/Жоро и Гената - тъмбнейл.jpg" alt="" class="slide-bg-img">
                 <div class="slide-overlay"></div>
                 <div class="hero-content">
@@ -475,7 +471,6 @@
 
             <!-- Слайд 3: Тъмбнейли -->
             <div class="hero-slide">
-                <!-- Тук слагаш пътя към твоята снимка -->
                 <img src="/Thumbnails/Кзак да си направим наргиле с повече дим - thumbnail - new - final.jpg" alt="Тъмбнейли фон" class="slide-bg-img">
                 <div class="slide-overlay"></div>
                 <div class="hero-content">
@@ -494,21 +489,13 @@
                 <ul class="category-list1">
                     <li>
                         <a href="portfolio.html?category=edited">
-                            <!-- Добавен loading="lazy" и превод на alt атрибутите -->
                             <img src="edited.png" alt="Монтирани видеа" class="category-image1" loading="lazy">
                         </a>
                     </li>
                     <li>
-<<<<<<< HEAD
                         <a href="shooted.html?category=shooted">
                             <img src="shooted.png" alt="Заснети видеа" class="category-image1" loading="lazy">
                         </a>
-=======
-                        <!--<h2 style="color: white;">Shooted Videos</h2>-->
-                        <a href="photography.html">
-                        <img src="photography.png" alt="Photography" class="category-image"> <!-- Replace with your image -->
-                    </a>
->>>>>>> f897cc3d37635c56d5de66af6fe9e47466e58bdf
                     </li>
                     <li>
                         <a href="thumbnails.html?category=thumbnails">
@@ -519,7 +506,7 @@
             </div>
         </section>
 
-        <!-- Testimonials (С обновена структура за плавен преход) -->
+        <!-- Testimonials -->
         <section class="testimonials">
             <h2 class="section-title">Мнения от клиенти</h2>
             <div class="testimonial-slider">
@@ -556,7 +543,7 @@
         © 2026 Kriskata. Всички права запазени.
     </footer>
 
-    <!-- Скриптове (Групирани в края на body) -->
+    <!-- Скриптове -->
     <script>
         // Функция за мобилното меню и анимацията на хамбургера
         function toggleMenu() {
@@ -594,11 +581,17 @@
     
             setInterval(showNextTestimonial, 8000);
         });
+
+        // --- ЛОГИКА ЗА NETLIFY IDENTITY (РЕСЕТ НА ПАРОЛА И ЛОГИН) ---
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
     </script>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
-
->>>>>>> f897cc3d37635c56d5de66af6fe9e47466e58bdf
