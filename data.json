@@ -2625,30 +2625,6 @@
       ]
     },
     {
-      "id": "prolet",
-      "title": "Кюстендилска пролет 2025",
-      "cover": "/Photography/Horizontal/Кюстендилска пролет/1.jpg",
-      "images": [
-        "/Photography/Horizontal/Кюстендилска пролет/1.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/2.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/3.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/4.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/5.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/6.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/7.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/8.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/9.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/10.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/11.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/12.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/13.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/14.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/15.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/16.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/17.jpg"
-      ]
-    },
-    {
       "id": "cheresha",
       "title": "Празник на Черешата",
       "cover": "/Photography/Horizontal/Череша/DSC03928-Enhanced-NR.jpg",
@@ -2733,6 +2709,30 @@
         "/Photography/Horizontal/Изи/DSC03013-Enhanced-NR.jpg",
         "/Photography/Horizontal/Изи/DSC03127-Enhanced-NR.jpg",
         "/Photography/Horizontal/Изи/DSC03209-Enhanced-NR.jpg"
+      ]
+    },
+    {
+      "id": "prolet",
+      "title": "Кюстендилска пролет 2025",
+      "cover": "/Photography/Horizontal/Кюстендилска пролет/1.jpg",
+      "images": [
+        "/Photography/Horizontal/Кюстендилска пролет/1.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/2.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/3.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/4.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/5.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/6.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/7.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/8.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/9.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/10.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/11.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/12.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/13.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/14.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/15.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/16.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/17.jpg"
       ]
     },
     {
