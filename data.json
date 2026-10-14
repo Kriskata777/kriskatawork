@@ -1,6 +1,58 @@
 {
   "albums": [
     {
+      "id": "bgmusic",
+      "title": "BG Music Festival",
+      "cover": "/Photography/Uploads/bg-music-15-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/bg-music-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/bg-music-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/bg-music-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/bg-music-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/bg-music-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/bg-music-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/bg-music-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/bg-music-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/bg-music-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/bg-music-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/bg-music-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/bg-music-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/bg-music-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/bg-music-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/bg-music-16-.jpg"
+        }
+      ]
+    },
+    {
       "id": "cheresha26",
       "title": "Празник на черешата 2026",
       "cover": "/Photography/Uploads/cheresha-14-.jpg",
