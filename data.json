@@ -1,6 +1,121 @@
 {
   "albums": [
     {
+      "id": "plovdiv",
+      "title": "Празникът на Кючука",
+      "cover": "/Photography/Uploads/plovdiv-31-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/plovdiv-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-17-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-18-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-19-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-20-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-21-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-22-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-23-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-24-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-25-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-26-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-27-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-28-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-29-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-30-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-31-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-32-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-33-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-34-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-35-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-36-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-37-.jpg"
+        }
+      ]
+    },
+    {
       "id": "plodorodie2026",
       "title": "Празник на плодородието 2026",
       "cover": "/Photography/Uploads/plodorodie-2026-22-.jpg",
