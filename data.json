@@ -1,6 +1,121 @@
 {
   "albums": [
     {
+      "id": "pirin-folk",
+      "title": "Пирин Фолк",
+      "cover": "/Photography/Uploads/pirin-folk-25-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/pirin-folk-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-17-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-18-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-19-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-20-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-21-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-22-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-23-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-24-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-25-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-26-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-27-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-28-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-29-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-30-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-31-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-32-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-33-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-34-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-35-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-36-.jpg"
+        }
+      ]
+    },
+    {
       "id": "rapica",
       "title": "Фотосесия - рапица",
       "cover": "/Photography/Uploads/rapica-6-.jpg",
