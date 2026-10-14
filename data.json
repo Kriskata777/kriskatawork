@@ -1,6 +1,112 @@
 {
   "albums": [
     {
+      "id": "krai-izvora",
+      "title": "Национален фолклорен фестивал \"Край извора\"",
+      "cover": "/Photography/Uploads/sofia-26-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/sofia-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-17-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-18-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-19-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-21-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-22-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-23-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-24-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-25-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-26-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-27-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-28-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-29-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-30-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-31-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-32-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-33-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-34-.jpg"
+        }
+      ]
+    },
+    {
       "id": "plovdiv",
       "title": "Празникът на Кючука",
       "cover": "/Photography/Uploads/plovdiv-31-.jpg",
