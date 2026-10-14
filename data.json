@@ -886,6 +886,37 @@
       ]
     },
     {
+      "id": "georgi",
+      "title": "Абитуриентска Георги",
+      "cover": "/Photography/Uploads/abiurientska-goshe-5-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/abiurientska-goshe-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiurientska-goshe-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiurientska-goshe-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiurientska-goshe-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiurientska-goshe-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiurientska-goshe-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiurientska-goshe-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiurientska-goshe-8-.jpg"
+        }
+      ]
+    },
+    {
       "id": "buki",
       "title": "Абитуриентска Алекс",
       "cover": "/Photography/Uploads/abiturientska-8-.jpg",
