@@ -3268,6 +3268,34 @@
         "/Photography/Horizontal/Празник на плодородието/12.jpg",
         "/Photography/Horizontal/Празник на плодородието/13.jpg"
       ]
+    },
+    {
+      "id": "hisarlaka-experience-2024",
+      "title": "Хисарлъка Experience 2024",
+      "cover": "/Photography/Uploads/hisarlaka-experience-2024-1-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2024-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2024-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2024-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2024-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2024-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2024-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2024-7-.jpg"
+        }
+      ]
     }
   ]
 }
