@@ -1,6 +1,430 @@
 {
   "albums": [
     {
+      "id": "krai-izvora",
+      "title": "Национален фолклорен фестивал \"Край извора\"",
+      "cover": "/Photography/Uploads/sofia-26-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/sofia-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-17-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-18-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-19-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-21-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-22-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-23-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-24-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-25-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-26-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-27-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-28-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-29-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-30-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-31-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-32-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-33-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/sofia-34-.jpg"
+        }
+      ]
+    },
+    {
+      "id": "plovdiv",
+      "title": "Празникът на Кючука 2026",
+      "cover": "/Photography/Uploads/plovdiv-31-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/plovdiv-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-17-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-18-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-19-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-20-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-21-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-22-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-23-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-24-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-25-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-26-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-27-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-28-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-29-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-30-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-31-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-32-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-33-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-34-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-35-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-36-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plovdiv-37-.jpg"
+        }
+      ]
+    },
+    {
+      "id": "plodorodie2026",
+      "title": "Празник на плодородието 2026",
+      "cover": "/Photography/Uploads/plodorodie-2026-22-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-17-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-18-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-19-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-20-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-21-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-22-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-23-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-24-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-25-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-26-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2026-27-.jpg"
+        }
+      ]
+    },
+    {
+      "id": "pirin-folk",
+      "title": "Пирин Фолк 2026",
+      "cover": "/Photography/Uploads/pirin-folk-25-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/pirin-folk-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-17-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-18-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-19-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-20-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-21-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-22-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-23-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-24-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-25-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-26-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-27-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-28-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-29-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-30-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-31-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-32-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-33-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-34-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-35-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pirin-folk-36-.jpg"
+        }
+      ]
+    },
+    {
       "id": "kosovo",
       "title": "Международен танцов фестивал „Опоя танцува“",
       "cover": "/Photography/Uploads/kosovo-17-.jpg",
@@ -201,7 +625,7 @@
     },
     {
       "id": "bgmusic",
-      "title": "BG Music Festival",
+      "title": "BG Music Festival - Кюстендил 2026",
       "cover": "/Photography/Uploads/bg-music-15-.jpg",
       "photos": [
         {
@@ -406,6 +830,112 @@
       ]
     },
     {
+      "id": "abiturienti-2026",
+      "title": "Абитуриенти 2026",
+      "cover": "/Photography/Uploads/2026-58-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/2026-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-27-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-29-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-31-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-32-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-33-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-34-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-38-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-18-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-22-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-45-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-39-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-40-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-43-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-44-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-50-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-52-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-53-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-54-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-58-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-60-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-72-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-74-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/2026-80-.jpg"
+        }
+      ]
+    },
+    {
       "id": "valkata",
       "title": "Абитуриентска Валери",
       "cover": "/Photography/Uploads/dsc03828-enhanced-nr.jpg",
@@ -462,8 +992,107 @@
       ]
     },
     {
+      "id": "georgi",
+      "title": "Абитуриентска Георги",
+      "cover": "/Photography/Uploads/abiurientska-goshe-5-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/abiurientska-goshe-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiurientska-goshe-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiurientska-goshe-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiurientska-goshe-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiurientska-goshe-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiurientska-goshe-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiurientska-goshe-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiurientska-goshe-8-.jpg"
+        }
+      ]
+    },
+    {
+      "id": "buki",
+      "title": "Абитуриентска Алекс",
+      "cover": "/Photography/Uploads/abiturientska-8-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/abiturientska-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiturientska-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiturientska-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiturientska-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiturientska-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiturientska-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiturientska-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiturientska-9-.jpg"
+        }
+      ]
+    },
+    {
+      "id": "rapica",
+      "title": "Фотосесия - рапица",
+      "cover": "/Photography/Uploads/rapica-6-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/rapica-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/rapica-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/rapica-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/rapica-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/rapica-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/rapica-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/rapica-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/rapica-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/rapica-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/rapica-10.jpg"
+        }
+      ]
+    },
+    {
       "id": "petrich",
-      "title": "Международен детски конкурс „Южни слънца“",
+      "title": "Международен детски конкурс „Южни слънца“ 2026",
       "cover": "/Photography/Uploads/5-.jpg",
       "photos": [
         {
@@ -710,7 +1339,7 @@
       ]
     },
     {
-      "title": "Когато звездите шепнат мечти",
+      "title": "Когато звездите шепнат мечти 2026",
       "id": "zvezdite",
       "cover": "/Photography/Uploads/kogato-zvezdite-shepnat-mechti-166-.jpg",
       "photos": [
@@ -1504,7 +2133,7 @@
       ]
     },
     {
-      "title": "Сурва Перник",
+      "title": "Сурва Перник 2026",
       "id": "surva-pernik",
       "cover": "/Photography/Uploads/dsc02257-enhanced-nr.jpg",
       "photos": [
@@ -2367,8 +2996,153 @@
       "title": "Сурва 2026"
     },
     {
+      "id": "nova-godina",
+      "title": "Посрещане на новата 2026 година",
+      "cover": "/Photography/Uploads/nova-godina-2026-41-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-17-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-18-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-19-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-20-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-21-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-22-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-23-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-24-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-25-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-26-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-27-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-28-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-29-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-30-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-31-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-32-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-33-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-34-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-35-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-36-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-37-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-38-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-39-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-40-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-41-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-42-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-43-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-44-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-45-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/nova-godina-2026-46-.jpg"
+        }
+      ]
+    },
+    {
       "id": "kukeri",
-      "title": "Кукерско Шествие",
+      "title": "Кукерско Шествие 2025",
       "date": "27.12.2025",
       "cover": "/Photography/Uploads/dsc06722-enhanced-nr.jpg",
       "photos": [
@@ -2625,32 +3399,733 @@
       ]
     },
     {
-      "id": "prolet",
-      "title": "Кюстендилска пролет 2025",
-      "cover": "/Photography/Horizontal/Кюстендилска пролет/1.jpg",
-      "images": [
-        "/Photography/Horizontal/Кюстендилска пролет/1.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/2.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/3.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/4.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/5.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/6.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/7.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/8.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/9.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/10.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/11.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/12.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/13.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/14.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/15.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/16.jpg",
-        "/Photography/Horizontal/Кюстендилска пролет/17.jpg"
+      "id": "koncert-pmg",
+      "title": "Коледен концерт на ПМГ",
+      "cover": "/Photography/Uploads/koncert-pmg-3-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/koncert-pmg-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-17-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-18-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-19-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-20-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-21-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-22-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-23-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-24-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-25-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-26-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-27-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-28-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-29-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-30-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-31-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-32-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-33-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-34-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-35-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-36-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-37-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-38-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-39-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-40-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/koncert-pmg-41-.jpg"
+        }
+      ]
+    },
+    {
+      "id": "pohod-2025",
+      "title": "Световен ден на ходенето 2025",
+      "cover": "/Photography/Uploads/pohod-2025-1-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/pohod-2025-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-17-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-20-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-22-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-25-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-26-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-28-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-29-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2025-30-.jpg"
+        }
+      ]
+    },
+    {
+      "id": "plodorodie-2025",
+      "title": "Празник на плодородието 2025",
+      "cover": "/Photography/Uploads/plodorodie-2025-9-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-17-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-18-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-19-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-20-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-21-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-22-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-23-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-24-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-25-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-26-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-27-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-28-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-29-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-30-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/plodorodie-2025-32-.jpg"
+        }
+      ]
+    },
+    {
+      "id": "hill-ride",
+      "title": "Custom Hill Ride 2025",
+      "cover": "/Photography/Uploads/custom-hill-ride-2025-21-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-17-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-18-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-19-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-20-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-21-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-23-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-24-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-30-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-25-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-26-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-27-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-28-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-29-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-31-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/custom-hill-ride-2025-22-.jpg"
+        }
+      ]
+    },
+    {
+      "id": "panagia-2025",
+      "title": "Панагия 2025",
+      "cover": "/Photography/Uploads/panagia-2025-26-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/panagia-2025-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-17-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-18-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-19-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-20-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-21-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-22-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-23-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-24-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-25-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-26-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-27-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-28-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-29-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-30-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-31-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-32-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-33-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-34-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-35-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-36-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-37-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/panagia-2025-38-.jpg"
+        }
+      ]
+    },
+    {
+      "id": "hisarlaka-experience-2025",
+      "title": "Хисарлъка Experience 2025",
+      "cover": "/Photography/Uploads/hisarlaka-experience-2025-13-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2025-17-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2025-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2025-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2025-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2025-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2025-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2025-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2025-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2025-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2025-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2025-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2025-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2025-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2025-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2025-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2025-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2025-16-.jpg"
+        }
+      ]
+    },
+    {
+      "id": "pizza",
+      "title": "Пица за смет 2025",
+      "cover": "/Photography/Uploads/pica-za-smet-2025-17-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/pica-za-smet-2025-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pica-za-smet-2025-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pica-za-smet-2025-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pica-za-smet-2025-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pica-za-smet-2025-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pica-za-smet-2025-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pica-za-smet-2025-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pica-za-smet-2025-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pica-za-smet-2025-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pica-za-smet-2025-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pica-za-smet-2025-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pica-za-smet-2025-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pica-za-smet-2025-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pica-za-smet-2025-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pica-za-smet-2025-16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pica-za-smet-2025-17-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pica-za-smet-2025-18-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pica-za-smet-2025-20-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pica-za-smet-2025-19-.jpg"
+        }
+      ]
+    },
+    {
+      "id": "pautalia",
+      "title": "Международен фолклорен конкурс \"Пауталия\" 2025",
+      "cover": "/Photography/Uploads/pautlia-2025-6-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/pautlia-2025-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-17-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-18-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-19-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-20-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-21-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-22-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-23-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-24-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pautlia-2025-25-.jpg"
+        }
       ]
     },
     {
       "id": "cheresha",
-      "title": "Празник на Черешата",
+      "title": "Празник на Черешата 2025",
       "cover": "/Photography/Horizontal/Череша/DSC03928-Enhanced-NR.jpg",
       "images": [
         "/Photography/Horizontal/Череша/DSC03928-Enhanced-NR.jpg",
@@ -2692,7 +4167,7 @@
     },
     {
       "id": "colors",
-      "title": "Colors of Kyustendil",
+      "title": "Colors of Kyustendil 2025",
       "cover": "/Photography/Horizontal/Графити/512679163_122133700874682262_2328738222949654220_n.jpg",
       "images": [
         "/Photography/Horizontal/Графити/512679163_122133700874682262_2328738222949654220_n.jpg",
@@ -2733,6 +4208,30 @@
         "/Photography/Horizontal/Изи/DSC03013-Enhanced-NR.jpg",
         "/Photography/Horizontal/Изи/DSC03127-Enhanced-NR.jpg",
         "/Photography/Horizontal/Изи/DSC03209-Enhanced-NR.jpg"
+      ]
+    },
+    {
+      "id": "prolet",
+      "title": "Кюстендилска пролет 2025",
+      "cover": "/Photography/Horizontal/Кюстендилска пролет/1.jpg",
+      "images": [
+        "/Photography/Horizontal/Кюстендилска пролет/1.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/2.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/3.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/4.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/5.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/6.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/7.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/8.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/9.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/10.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/11.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/12.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/13.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/14.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/15.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/16.jpg",
+        "/Photography/Horizontal/Кюстендилска пролет/17.jpg"
       ]
     },
     {
@@ -2782,6 +4281,34 @@
       ]
     },
     {
+      "id": "pohod-2024",
+      "title": "Световен ден на ходенето 2024",
+      "cover": "/Photography/Uploads/pohod-2024-1-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/pohod-2024-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2024-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2024-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2024-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2024-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2024-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/pohod-2024-7-.jpg"
+        }
+      ]
+    },
+    {
       "id": "plodorodie",
       "title": "Празник на плодородието 2024",
       "cover": "/Photography/Horizontal/Празник на плодородието/1.jpg",
@@ -2806,6 +4333,34 @@
         "/Photography/Horizontal/Празник на плодородието/11.jpg",
         "/Photography/Horizontal/Празник на плодородието/12.jpg",
         "/Photography/Horizontal/Празник на плодородието/13.jpg"
+      ]
+    },
+    {
+      "id": "hisarlaka-experience-2024",
+      "title": "Хисарлъка Experience 2024",
+      "cover": "/Photography/Uploads/hisarlaka-experience-2024-1-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2024-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2024-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2024-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2024-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2024-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2024-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/hisarlaka-experience-2024-7-.jpg"
+        }
       ]
     }
   ]
