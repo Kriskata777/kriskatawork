@@ -1,6 +1,34 @@
 {
   "albums": [
     {
+      "id": "valkata",
+      "title": "Абитуриентска Валери",
+      "cover": "/Photography/Uploads/dsc03828-enhanced-nr.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/valkata-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/valkata-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/valkata-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/valkata-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/valkata-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/valkata-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/valkata-6-.jpg"
+        }
+      ]
+    },
+    {
       "id": "kristin",
       "title": "Абитуриентска Кристин",
       "cover": "/Photography/Uploads/kristin-6-.jpg",
