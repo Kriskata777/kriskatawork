@@ -1,6 +1,205 @@
 {
   "albums": [
     {
+      "id": "kosovo",
+      "title": " „Опоя танцува“",
+      "cover": "/Photography/Uploads/kosovo-17-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/kosovo-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-10-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-11-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-12-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-13-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-14-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-15-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-16-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-17-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-18-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-19-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-20-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-21-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-22-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-23-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-24-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-26-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-28-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-29-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-30-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-31-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-32-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-33-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-34-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-35-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-36-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-37-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-38-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-39-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-40-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-41-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-42-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-43-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-44-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-46-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-47-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-48-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-49-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-50-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-51-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-52-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-53-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-55-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-56-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-57-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-58-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-59-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-60-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-61-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-62-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-63-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-64-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-65-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-66-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-67-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/kosovo-68-.jpg"
+        }
+      ]
+    },
+    {
       "id": "bgmusic",
       "title": "BG Music Festival",
       "cover": "/Photography/Uploads/bg-music-15-.jpg",
