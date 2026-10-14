@@ -886,6 +886,37 @@
       ]
     },
     {
+      "id": "buki",
+      "title": "Абитуриентска Алекс",
+      "cover": "/Photography/Uploads/abiturientska-8-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/abiturientska-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiturientska-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiturientska-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiturientska-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiturientska-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiturientska-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiturientska-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/abiturientska-9-.jpg"
+        }
+      ]
+    },
+    {
       "id": "rapica",
       "title": "Фотосесия - рапица",
       "cover": "/Photography/Uploads/rapica-6-.jpg",
