@@ -1,6 +1,43 @@
 {
   "albums": [
     {
+      "id": "rapica",
+      "title": "Фотосесия - рапица",
+      "cover": "/Photography/Uploads/rapica-6-.jpg",
+      "photos": [
+        {
+          "image": "/Photography/Uploads/rapica-1-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/rapica-2-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/rapica-3-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/rapica-4-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/rapica-5-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/rapica-6-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/rapica-7-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/rapica-8-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/rapica-9-.jpg"
+        },
+        {
+          "image": "/Photography/Uploads/rapica-10.jpg"
+        }
+      ]
+    },
+    {
       "id": "kosovo",
       "title": "Международен танцов фестивал „Опоя танцува“",
       "cover": "/Photography/Uploads/kosovo-17-.jpg",
